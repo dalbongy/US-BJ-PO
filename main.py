@@ -1,5 +1,9 @@
+import os
+
 import yaml
 import openai
+from dotenv import load_dotenv
 
-config = yaml.safe_load(open("config.yml"))
-openai.api_key = config['KEYS']['openai']
+load_dotenv()
+
+openai.api_key = os.getenv('OPEN_AI_KEY')
