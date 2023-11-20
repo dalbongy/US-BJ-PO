@@ -1,10 +1,13 @@
-This is a simulation of a of blackjack between the house, 3 players and 1 additional player that is counting cards.
-There is also a security to make sure no one is counting cards.
+This is a simulation of a of blackjack game.
+One of the players is counting cards.
+There is also a security that tries to catch card counters.
+
+Amount of Players: <Players>
 
 Deck of Cards: <Cards>
 
 Stake: <Stake>
 
 There are at most <Num_Rounds> rounds of messages between the house and the players. When players are still playing, they leave
-the table and cash out there <Stake>
+the table and cash out their <Stake>
 The house starts with his or her message.
