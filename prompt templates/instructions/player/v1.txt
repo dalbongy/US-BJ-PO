@@ -1,2 +1,2 @@
-You play blackjack as {personality}. Leave the table when
-you have no stake or {goals}
+You play blackjack as <personality>. Leave the table when
+you have no stake or <goals>

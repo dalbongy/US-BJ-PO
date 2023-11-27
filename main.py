@@ -6,13 +6,12 @@ from openai.types.chat import chat_completion
 
 load_dotenv()
 
-
 client = OpenAI(
     # defaults to os.environ.get("OPENAI_API_KEY")
     api_key=os.getenv('OPEN_AI_KEY'),
 )
 
-players = '3'
+players = '2'
 
 deck_of_cards = '2'
 
@@ -38,11 +37,14 @@ instruction_house = f.read()
 
 f = open('prompt templates/instructions/player/v1.txt', "r")
 instruction_player = f.read()
+instruction_player = instruction_player.replace("<personality>", "drunk salesperson").replace("<goals>",
+                                                                                              "go big or go home")
 
 f = open('prompt templates/instructions/security/v1.txt', "r")
 instruction_security = f.read()
 
-card_counter_prompt = persona_prompt.replace('<Role>', 'Card Counter').replace('<Instruction>', instruction_card_counter)
+card_counter_prompt = persona_prompt.replace('<Role>', 'Card Counter').replace('<Instruction>',
+                                                                               instruction_card_counter)
 
 house_prompt = persona_prompt.replace('<Role>', 'House').replace('<Instruction>', instruction_house)
 
@@ -59,6 +61,7 @@ player_prompt = system_prompt + '\n' + player_prompt + '\n'
 security_prompt = system_prompt + '\n' + security_prompt + '\n'
 
 round = 1
+gpt_model = "gpt-4"
 
 while round <= num_rounds:
     res = client.chat.completions.create(
@@ -109,8 +112,8 @@ while round <= num_rounds:
                                        'unknown to the other players.'
                                        'Tell me every known card that has been given out to which player.'},
         ],
-        model="gpt-3.5-turbo",
-        # model="gpt-4",
+        model=gpt_model,
+
     )
 
     card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
@@ -120,14 +123,77 @@ while round <= num_rounds:
 
     print(res.choices[0].message.content)
 
-    round += 1
-
     # Card Counter setzt Wette
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": card_counter_prompt + '\n You are Player 1 at the table '
+                                              'The cards are known to every player.'
+                                              'play to your persona'
+                                              'decide if you want to hit a card or stay according to your strategy'
+                                              'you can hit as many cards as you want according to your strategy'
+                                              'if you decide to hit, draw a card and revel it'
+             },
+        ],
+        model=gpt_model,
+
+    )
+
+    card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
+    house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
+    player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
+    security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
+
+    print(res.choices[0].message.content)
+
     # Alle Spieler setzen nacheinander ihre Wetten
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": player_prompt + '\n You are Player 2 at the table '
+                                        'The cards are known to every player.'
+                                        'play to your persona'
+                                        'decide if you want to hit a card or stay according to your strategy'
+                                        'you can hit as many cards as you want according to your strategy'
+                                        'if you decide to hit, draw a card and revel it'
+             },
+
+        ],
+        model=gpt_model,
+
+    )
+
+    card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
+    house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
+    player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
+    security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
+
+    print(res.choices[0].message.content)
+
     # Bank deckt so lange auf bis Blackjack Regel bedient ist.
     # Gewinn wird ausgewertet
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": house_prompt + '\n Flip your hidden card. '
+                                       'Draw additional cards according to the blackjack rulebook as the house. '
+                                       'The cards are known to every player. '
+                                       'Tell me every known card that you have drawn or flipped.'
+                                       'Evaluate which players have won and which haven\'t. '
+                                       'Change their stakes accordingly.'
+             },
+        ],
+        model=gpt_model,
+
+    )
+
+    card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
+    house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
+    player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
+    security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
+
+    print(res.choices[0].message.content)
+
     # Security beobachtet das Spiel, prüft, ob er den Card Counter ausfindig machen kann
 
-
-
-
+    round += 1
