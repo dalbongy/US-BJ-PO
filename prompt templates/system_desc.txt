@@ -1,6 +1,8 @@
 This is a simulation of a of blackjack game.
 One of the players is counting cards.
 There is also a security that tries to catch card counters.
+Before a rounds starts, every player has to bet some of his Stake to participate.
+The cards that are added will count to the SUM of the hand of the players.
 
 Amount of Players: <Players>
 

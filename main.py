@@ -61,6 +61,43 @@ security_prompt = system_prompt + '\n' + security_prompt + '\n'
 round = 1
 
 while round <= num_rounds:
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": card_counter_prompt + '\n You are Player 1 at the table '
+                                              'bet your stake'
+                                              'play to your persona'
+             },
+        ],
+        model=gpt_model,
+
+    )
+
+    card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
+    house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
+    player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
+    security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
+
+    print(res.choices[0].message.content)
+
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": player_prompt + '\n You are Player 2 at the table. '
+                                        'Play to your persona.'
+                                        'bet your stake'},
+
+        ],
+        model=gpt_model,
+    )
+
+    card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
+    house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
+    player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
+    security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
+
+    print(res.choices[0].message.content)
+
     # Bank teilt jedem eine Karte aus und deckt seine erste Karte auf
     # Bank teilt jedem seine 2. Karte aus und zieht seine 2. Karte verdeckt
     res = client.chat.completions.create(
