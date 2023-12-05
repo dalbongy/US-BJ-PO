@@ -3,6 +3,11 @@ One of the players is counting cards.
 There is also a security that tries to catch card counters.
 Before a rounds starts, every player has to bet some of his Stake to participate.
 The cards that are added will count to the SUM of the hand of the players.
+If it is the players turn to hit, the next player can only decide to hit if the previous player ends his turn.
+If a player decides to hit, he can hit another card as long as he thinks it fits his strategy.
+The player will always be asked by the house if the player wants to stay or hit
+If the players stake is 0, the player is not allowed to buy in again.
+If a player wins against the house, the player get his bets returned and receives winnings to the amount of his bets.
 
 Amount of Players: <Players>
 

@@ -37,7 +37,9 @@ instruction_house = f.read()
 f = open('prompt templates/instructions/player/v1.txt', "r")
 instruction_player = f.read()
 instruction_player = instruction_player.replace("<personality>", "drunk salesperson").replace("<goals>",
-                                                                                              "go big or go home")
+                                                                                              "go big or go home "
+                                                                                              "but dont go all in for "
+                                                                                              "the first 3 rounds")
 
 f = open('prompt templates/instructions/security/v1.txt', "r")
 instruction_security = f.read()
@@ -184,7 +186,10 @@ while round <= num_rounds:
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
-             "content": house_prompt + '\n Flip your hidden card. '
+             "content": house_prompt +
+                                       'start revealing your second card if every player decides to stay with their'
+                                       'hand.'
+                                       ' \n Flip your hidden card. '
                                        'Draw additional cards according to the blackjack rulebook as the house. '
                                        'The cards are known to every player. '
                                        'Tell me every known card that you have drawn or flipped.'
