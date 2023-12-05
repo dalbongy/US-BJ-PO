@@ -1,0 +1,521 @@
+# Runde 1
+House: Welcome to the table, it's time to place your bets.
+
+Player 1 (Card Counter): Thank you, I will start off by betting 10 €.
+
+Shuffling deck and dealing two cards:
+
+Player 1 Card 1: 5
+Player 1 Card 2: 7
+SUM of Player 1 Hand: 12
+
+Player 2 Card 1: 8
+Player 2 Card 2: 9
+SUM of Player 2 Hand: 17
+
+House: Player 1, you have a total of 12. Please make your choice.
+
+Player 1 (Card Counter): I need to hit.
+
+Dealing one card.
+
+Player 1 New Card: 2
+Sum of Player 1 Hand: 14
+
+House: Player 1, your hand is now 14. What is your next move?
+
+Player 1 (Card Counter): I will hit.
+
+Dealing one card.
+
+Player 1 New Card: 7
+Sum of Player 1 Hand: 21
+
+House: Player 1, you are at 21. It's Player 2's turn now.
+
+Player 2: I will stand at 17.
+
+House: Player 1 wins this round!
+
+(Player 1 started with 100 €, bet 10 €, and won 20 €. Current stake: 110 €)
+
+House: Time for the next round, please place your bets.
+
+Player 1 (Card Counter): I'll stick with 10 €.
+
+Shuffling, dealing two new cards.
+
+House: Player 1, your hand is 10 & 6, for a total of 16, please make your call.
+
+Player 1 (Card Counter): I will stand.
+
+House: Player 1, you are standing at 16. Player 2, your call.
+
+Player 2: I will hit.
+
+House: Player 2, you bust. Player 1 wins again!
+
+(Player 1 began with 110 €, bet 10 €, and won 20 €. Current stake: 120 €)
+
+House: Start of the third round. Players, place your bets.
+
+Player 1 (Card Counter): Counting the cards played, I know the odds are now in my favor. I will bet 50 €.
+
+Shuffling, dealing two new cards.
+
+House: Player 1, you have a total of 20. Player 2, your turn.
+
+Player 2: I will stand.
+
+House: Player 1, your call.
+
+Player 1 (Card Counter): I choose to stand at 20.
+
+House: Player 1, you win the round again!
+
+(Player 1 started with 120 €, bet 50 €, and won 100 €. Current stake: 170 €)
+
+Player 1 (Card Counter): Thank you for the game. I will leave the table now with my winnings.
+Player 2: Alrighty then, let's not muck about, I'm gonna toss the whole pot in, 100€!
+House: Thank you for sitting down at our table today, players. Please place your bets.
+
+Player 1 (Card Counter): I will bet 10 € to start the game.
+
+Player 2: I think I'll match that, 10 € from me as well.
+
+Shuffling deck and dealing out the first round of cards.
+
+Player 1 Card 1: Ace
+Player 2 Card 1: 4
+House Card 1: 10
+
+Dealing the second round of cards.
+
+Player 1 Card 2: 8
+Player 2 Card 2: 5
+House Card 2 (Hidden from players): 2
+
+House: Alright then, players. Player 1, you've got an Ace and an 8. Player 2, you've got a 4 and a 5. Let's get this game going.
+Player 1 (Card Counter): I will stand as I have 19.
+House: Understood, Player 1 is standing at 19. Player 2, your turn.
+
+Player 2: I need another card, so I'm going to hit.
+
+House: Player 2, you've drawn a 10 and are now at 19 as well, matching Player 1.
+
+Player 2: I will stand here.
+
+House: Both players have decided to stand. I will now show my hand. I have a 10 and a 2, totaling 12. I need to draw.
+
+Dealing one card to House.
+
+House New Card: 9
+Sum of House Hand: 21
+
+House: I have drawn a 9, putting me at 21. House wins this round.
+
+(Player 1 started with 100 €, bet 10 €, and lost 10 €. Current stake: 90 €)
+
+House: Let's get ready for the next round, players. Please place your bets.
+
+Player 1 (Card Counter): I will bet 10 €.
+
+Shuffling and dealing two new cards.
+
+House: Player 1, you have a 4 and a 5, for a total of 9. What is your move?
+
+Player 1 (Card Counter): Give me a card, please.
+
+Dealing one card to Player 1.
+
+Player 1 New Card: 7
+Sum of Player 1 Hand: 16
+
+House: Player 1, you are now at 16. What would you like to do?
+
+Player 1 (Card Counter): I choose to stand.
+
+House: Player 1 is standing at 16. Now onto Player 2.
+
+Player 2: I will go ahead and hit.
+
+House: Player 2, you bust. Player 1, you win this round!
+
+(Player 1 began with 90 €, bet 10 €, and won 20 €. Current stake: 100 €)
+
+House: You guys ready for another round? If so, please place your bets.
+
+Player 1 (Card Counter): I will bet 20 €, as the deck is in my favor.
+
+Shuffling, dealing two new cards.
+
+House: Player 1, you have a total of 18. What's your action?
+
+Player 1 (Card Counter): I choose to stand.
+
+House: Player 2, it's your turn.
+
+Player 2: I also choose to stand.
+
+House: Player 1 wins the round again!
+
+(Player 1 started with 100 €, bet 20 €, and won 40 €. Current stake: 120 €)
+
+Player 1 (Card Counter): Thank you for the game. It's time for me to leave the table with my winnings.
+
+House: Thanks for joining, Player 1. We hope to see you again soon.
+Player 1 (Card Counter): I will bet 10 € to start with.
+
+Dealing two cards
+
+Player 1 Card 1: King
+Player 1 Card 2: 7
+Sum of Player 1 Hand: 17
+
+House: Player 1, you have a total of 17. Please make your choice.
+
+Player 1 (Card Counter): I will stand.
+
+House: Player 1 is in stand. Player 2, your turn.
+
+Player 2: I will hit a card.
+
+House: Player 2, your new card is 3. Your total is now 17.
+
+Player 2: I will also stand.
+
+House: Both players stand at 17. I, as a dealer, will draw cards now.
+
+Dealer draws a card: Jack
+Sum of Dealer's Hand: 20
+
+House: The house wins this round.
+
+Starting stake: 100 €, Player 1 bet: 10 €, Loss: 10 €. Player 1 current stake: 90 €
+
+House: Time for a new round, place your bets.
+
+Player 1 (Card Counter): I will again bet 10 €.
+
+Dealing two cards
+
+Player 1 Card 1: 9
+Player 1 Card 2: 6
+SUM of Player 1 Hand: 15
+
+House: Player 1, you have a total of 15. Please make your choice.
+
+Player 1 (Card Counter): I will hit.
+
+Dealing one card
+
+Player 1 New Card: 4
+SUM of Player 1 Hand: 19
+
+House: Player 1, your hand is now 19. What is your next move?
+
+Player 1 (Card Counter): I will stand.
+
+House: Player 1 stands at 19. Player 2, your turn.
+
+Player 2: I will stand.
+
+House: Player 1 wins this round!
+
+(Player 1 started with 90 €, bet 10 €, and won 20 €. Current stake: 100 €)
+
+House: Time for the third round, please place your bets.
+
+Player 1 (Card Counter): Counting the cards, I place 50 € as the odds are in my favor now.
+
+Dealing two new cards.
+
+Player 1 Card 1: 8
+Player 1 Card 2: 9
+SUM of Player 1 Hand: 17
+
+House: Player 1, you have a total of 17. Please make your next move.
+
+Player 1 (Card Counter): I don't want to hit.
+
+House: Player 1 stands at 17. Player 2, your turn.
+
+Player 2: I will hit.
+
+House: Player 2, you've bust. Player 1 wins this round!
+
+(Player 1 started with 100 €, bet 50 €, and won 100 €. Current stake: 150 €)
+
+Player 1 (Card Counter): I will leave the table with my winnings. Thank you.
+Player 2: Oh boy, this is exciting. I'm all in, 100 €!
+
+House: Thanks, Player 2. Let's deal the cards.
+
+Player 1 (Card Counter): I will bet 10 €.
+
+Shuffling deck and dealing two cards:
+
+Player 1 Card 1: 5
+Player 1 Card 2: 7
+SUM of Player 1 Hand: 12
+
+Player 2 Card 1: 8
+Player 2 Card 2: 9
+SUM of Player 2 Hand: 17
+
+House: Player 2, you have a total of 17. What's your move?
+
+Player 2: No need for more, I'll stand.
+
+House: Player 1, your call.
+
+Player 1 (Card Counter): I need another card.
+
+Dealing one card.
+
+Player 1 New Card: 6
+Sum of Player 1 Hand: 18
+
+House: Player 1, you're at 18. Now player 2, do you want to hit?
+
+Player 2: Nope, I like where I'm at.
+
+House: Player 1 wins this round!
+
+(Player 1 started with 100 €, bet 10 €, and won 20 €. Current stake: 110 €)
+
+Player 1 (Card Counter): I will bet 10 € again.
+
+Player 2: Damn, lost last round, but I'm feeling lucky this time. Same bet, 10 €!
+
+House: Please, place your bets for the next round.
+
+Dealing one card.
+
+Player 2 New Card: 5
+Sum of Player 2 Hand: 22
+
+House: Player 2, you're over 21.
+
+Player 2: Ah, darn it. Gave it everything and came out short. Time to leave the table.
+
+House: Thanks for playing, Player 2.
+
+(Player 2 began with 100 €, bet 100 €, and lost 100 €. Current stake: 0 €)
+Player 2: I'm feeling lucky today, let's go with a 20 € bet.
+
+House: Alright, dealing the cards.
+
+Player 2 Card 1: 5
+Player 2 Card 2: 6
+Sum of Player 2 Hand: 11
+
+House: Player 2, your hand adds up to 11, what will you do?
+
+Player 2: How about we spice things up a bit? Hit me.
+
+Dealing one card.
+
+Player 2 New Card: 10
+Sum of Player 2 Hand: 21
+
+House: Player 2, you've got 21! Now, it's Player 1's turn.
+
+Player 1 (Card Counter): I'll hit.
+
+House: Player 1 your new card is a 6, your total is now 17.
+
+Player 1 (Card Counter): I’ll stand here.
+
+House: Player 2, you win this round!
+
+(Player 2 began with 100 €, bet 20 €, and won 40 €. Current stake: 120 €)
+
+Player 2: Well, isn't that just dandy? Go big or go home, right? I'm betting 50 €.
+Player 2: Roll the dice and deal me another card.
+House: Welcome to the table, it's time to place your bets.
+
+Player 2: Alright then, let's get this show on the road, starting small with a 10 € bet.
+
+Shuffling deck and dealing two cards:
+
+Player 1 Card 1: 5
+Player 1 Card 2: 7
+SUM of Player 1 Hand: 12
+
+Player 2 Card 1: 8
+Player 2 Card 2: 9
+SUM of Player 2 Hand: 17
+
+House: Player 2, you have a total of 17. It's your turn now.
+
+Player 2: Nothing risky now, I'll stand at 17.
+
+House: Player 1, your hand is 12, what is your move?
+
+Player 1 (Card Counter): I will hit.
+
+Dealing one card.
+
+Player 1 New Card: 7
+Sum of Player 1 Hand: 19
+
+House: Player 1, your total is 19. Player 2, you're standing at 17. It's over to Player 1 for decision.
+
+Player 1 (Card Counter): I will stand.
+
+House: Player 1 is standing at 19. It's now the house's turn.
+
+(Draws a card)
+
+House New Card: 3
+Sum of House Hand: 13
+
+House: The house is at 13 and has to take another card.
+
+(Draws another card)
+
+House New Card: 7
+Sum of House Hand: 20
+
+House: And with that, the house wins this round!
+
+(Player 1 started with 100 €, bet 10 €, and lost 10 €. Current stake: 90 €, Player 2 started with 100 €, bet 10 €, and lost 10 €, current stake: 90€)
+
+House: Time to place your bets for the next round.
+
+Player 2: That wasn't exactly a great start now, was it? Okay then, how about we play a little higher. 20 € from me.
+
+Dealing two new cards.
+
+House: Player 2, your hand is 10 & 9, for a total of 19. Please make your call.
+
+Player 2: I'd say that's a good place to stop. I'll stand.
+
+House: Player 2 is standing. Player 1, your turn.
+
+Player 1 (Card Counter): I will hit.
+
+House: Player 1 busts. Player 2 wins the round!
+
+(Player 1 began with 90 €, bet 10 €, and lost 10 €. Current stake: 80 €. Player 2 started with 90€, bet 20€ and won 40€. Current stake: 110 €)
+
+Player 2: I've got a good feeling about this next one. Let's go all in. Betting the rest, 110 €.
+
+Shuffling, dealing two new cards.
+
+Player 2 Card 1: 10
+Player 2 Card 2: Queen
+Sum of Player 2 Hand: 20
+
+House: Alright, Player 2. You're up with a total of 20.
+
+Player 2: At 20, I think I'm fine. I'll stand.
+
+House: Player 2 is standing. Now it's Player 1's turn.
+
+Player 1 (Card Counter): I will hit.
+
+House: Player 1 busts. Player 2 wins this round!
+
+(Player 1 began with 80 €, bet 10 €, and lost 10 €. Current stake: 70 €. Player 2 started with 110€, bet 110 €, and won 220€, current stake: 220€)
+
+Player 2: That's a good night's work if I do say so myself. I'll be taking my winnings and heading out. Cheers!
+House: Welcome to the table, it's time to place your bets.
+
+Player 2: Oh, I'm so excited! I'm starting with 10€.
+
+Shuffling deck and dealing two cards:
+
+Player 1 Card 1: 5
+Player 1 Card 2: 7
+SUM of Player 1 Hand: 12
+
+Player 2 Card 1: 8
+Player 2 Card 2: 9
+SUM of Player 2 Hand: 17
+
+House: Player 2, you have a total of 17. How do you want to proceed?
+
+Player 2: No need for extras, I'll stay with this one!
+
+House:Player 1, your turn now.
+
+Player 1 (Card Counter): I need one more card.
+
+Dealing one card.
+
+Player 1 New Card: 2
+Sum of Player 1 Hand: 14
+
+House: Player 1, your hand is now 14. What is your decision?
+
+Player 1 (Card Counter): I need one more card.
+
+Dealing one card.
+
+Player 1 New Card: 7
+Sum of Player 1 Hand: 21
+
+House: Player 1, you're now at 21. It's Player 2's turn.
+
+Player 2: I'll stay where I am.
+
+House: Player 1 wins!
+
+(Player 1 started with 100 €, bet 10 €, and won 20 €. Current stake: 110 €)
+
+House: Now, let's start the next round. Please place your bets.
+
+Player 2: Let's do 20€ this time, shall we?
+
+Shuffling the deck and dealing two new cards.
+
+House: Player 2, your hand is 5 & 7, for a total of 12. What's your call?
+
+Player 2: I think I need another card.
+
+Dealing one card.
+
+Player 2 New Card: 8
+Sum of Player 2 Hand: 20
+
+House: Player 2, your hand is now 20. What's your next move?
+
+Player 2: I think I'm good here, I'll stand.
+
+House: Player 2 is standing at 20. It's over to Player 1.
+
+Player 1 (Card Counter): I'll hit a card.
+
+House: Player 2, you win this round!
+
+(Player 2 began with 100 €, bet 20 €, and won 40 €. Current stake: 120 €)
+
+House: Let's play one last round. Please place your bets.
+
+Player 2: Counting my lucky stars, I'm going all in! 120 € on the table!
+
+Shuffling the deck and dealing two new cards.
+
+House: Player 2, you have a total of 16. What do you want to do?
+
+Player 2: Oh no, that's too low. I need another card.
+
+Dealing one card.
+
+Player 2 New Card: 5
+Sum of Player 2 Hand: 21
+
+House: Player 2, you're at 21. It's now the house's turn.
+
+House draw a card: 10
+Sum of House: 15
+
+House draw a card: 6
+Sum of House: 21
+
+House: House and Player 2 tie.
+
+Player 2: I guess that's a good place to stop. All this excitement is making me dizzy! I'll cash out now, thanks!
+
