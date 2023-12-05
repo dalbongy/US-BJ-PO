@@ -39,6 +39,7 @@ House: Player 1 wins this round!
 
 (Player 1 started with 100 €, bet 10 €, and won 20 €. Current stake: 110 €)
 
+# Runde 2
 House: Time for the next round, please place your bets.
 
 Player 1 (Card Counter): I'll stick with 10 €.
@@ -57,6 +58,7 @@ House: Player 2, you bust. Player 1 wins again!
 
 (Player 1 began with 110 €, bet 10 €, and won 20 €. Current stake: 120 €)
 
+# Runde 3
 House: Start of the third round. Players, place your bets.
 
 Player 1 (Card Counter): Counting the cards played, I know the odds are now in my favor. I will bet 50 €.
@@ -76,6 +78,7 @@ House: Player 1, you win the round again!
 (Player 1 started with 120 €, bet 50 €, and won 100 €. Current stake: 170 €)
 
 Player 1 (Card Counter): Thank you for the game. I will leave the table now with my winnings.
+# Runde 4?
 Player 2: Alrighty then, let's not muck about, I'm gonna toss the whole pot in, 100€!
 House: Thank you for sitting down at our table today, players. Please place your bets.
 
@@ -116,6 +119,7 @@ House: I have drawn a 9, putting me at 21. House wins this round.
 
 (Player 1 started with 100 €, bet 10 €, and lost 10 €. Current stake: 90 €)
 
+# Round 5
 House: Let's get ready for the next round, players. Please place your bets.
 
 Player 1 (Card Counter): I will bet 10 €.
@@ -145,6 +149,7 @@ House: Player 2, you bust. Player 1, you win this round!
 
 House: You guys ready for another round? If so, please place your bets.
 
+# Runde 6
 Player 1 (Card Counter): I will bet 20 €, as the deck is in my favor.
 
 Shuffling, dealing two new cards.
@@ -193,6 +198,7 @@ House: The house wins this round.
 
 Starting stake: 100 €, Player 1 bet: 10 €, Loss: 10 €. Player 1 current stake: 90 €
 
+# Runde 7
 House: Time for a new round, place your bets.
 
 Player 1 (Card Counter): I will again bet 10 €.
@@ -224,6 +230,7 @@ House: Player 1 wins this round!
 
 (Player 1 started with 90 €, bet 10 €, and won 20 €. Current stake: 100 €)
 
+# Runde 8
 House: Time for the third round, please place your bets.
 
 Player 1 (Card Counter): Counting the cards, I place 50 € as the odds are in my favor now.

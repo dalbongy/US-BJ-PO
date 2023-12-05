@@ -16,7 +16,7 @@ deck_of_cards = '2'
 
 stake = '100 €'
 
-num_rounds = 3
+num_rounds = 2
 
 f = open('prompt templates/system_desc.txt', "r")
 system_prompt = f.read()
@@ -124,62 +124,54 @@ while round <= num_rounds:
 
     print(res.choices[0].message.content)
 
-    while True:
-        # Card Counter setzt Wette
-        res = client.chat.completions.create(
-            messages=[
-                {"role": "user",
-                 "content": card_counter_prompt + '\n You are Player 1 at the table '
-                                                  'The cards are known to every player.'
-                                                  'play to your persona'
-                                                  'decide if you want to hit a card or stay according to your strategy'
-                                                  'you can hit as many cards as you want according to your strategy'
-                                                  'if you decide to hit, draw a card and revel it'
-                                                  'if not then give back the following sentence: I don\'t want to hit.'
-                 },
-            ],
-            model=gpt_model,
+    # Card Counter setzt Wette
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": card_counter_prompt + '\n You are Player 1 at the table '
+                                              'The cards are known to every player.'
+                                              'play to your persona'
+                                              'decide if you want to hit a card or stay according to your strategy'
+                                              'you can hit as many cards as you want according to your strategy'
+                                              'if you decide to hit, draw a card and revel it'
+                                              'hit accordingly to the blackjack rulebook'
+             },
+        ],
+        model=gpt_model,
 
-        )
+    )
 
-        card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
-        house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
-        player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
-        security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
+    card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
+    house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
+    player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
+    security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
-        print(res.choices[0].message.content)
+    print(res.choices[0].message.content)
 
-        if 'I don\'t want to hit' in res.choices[0].message.content:
-            break
+    # Alle Spieler setzen nacheinander ihre Wetten
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": player_prompt + '\n You are Player 2 at the table '
+                                        'The cards are known to every player.'
+                                        'play to your persona'
+                                        'decide if you want to hit a card or stay according to your strategy'
+                                        'you can hit as many cards as you want according to your strategy'
+                                        'if you decide to hit, draw a card and revel it'
+                                        'hit accordingly to the blackjack rulebook.'
+             },
 
-    while True:
-        # Alle Spieler setzen nacheinander ihre Wetten
-        res = client.chat.completions.create(
-            messages=[
-                {"role": "user",
-                 "content": player_prompt + '\n You are Player 2 at the table '
-                                            'The cards are known to every player.'
-                                            'play to your persona'
-                                            'decide if you want to hit a card or stay according to your strategy'
-                                            'you can hit as many cards as you want according to your strategy'
-                                            'if you decide to hit, draw a card and revel it'
-                                            'if not then give back the following sentence: I don\'t want to hit.'
-                 },
+        ],
+        model=gpt_model,
 
-            ],
-            model=gpt_model,
+    )
 
-        )
+    card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
+    house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
+    player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
+    security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
-        card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
-        house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
-        player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
-        security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
-
-        print(res.choices[0].message.content)
-
-        if 'I don\'t want to hit' in res.choices[0].message.content:
-            break
+    print(res.choices[0].message.content)
 
     # Bank deckt so lange auf bis Blackjack Regel bedient ist.
     # Gewinn wird ausgewertet
@@ -197,6 +189,8 @@ while round <= num_rounds:
                                        'If a players has an ace, '
                                        'the value of the ace is that what makes the hand nearest to 21'
                                        'Change their stakes accordingly.'
+                                       'Please give me a table of all the played cards of each player.'
+                                       'Please give me an overview of the new stakes of each player.'
              },
         ],
         model=gpt_model,
