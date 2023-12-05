@@ -17,7 +17,7 @@ deck_of_cards = '2'
 
 stake = '100 €'
 
-num_rounds = 1
+num_rounds = 3
 
 f = open('prompt templates/system_desc.txt', "r")
 system_prompt = f.read()
@@ -180,6 +180,8 @@ while round <= num_rounds:
                                        'The cards are known to every player. '
                                        'Tell me every known card that you have drawn or flipped.'
                                        'Evaluate which players have won and which haven\'t. '
+                                       'If a players has an ace, '
+                                       'the value of the ace is that what makes the hand nearest to 21'
                                        'Change their stakes accordingly.'
              },
         ],
