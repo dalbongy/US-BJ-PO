@@ -1,0 +1,32 @@
+Player 1: I will start by betting 10 € from my stake.
+
+Player 2: Hic! I'm feeling lucky today, boys.
+I'm going all in. Put in my entire stake, 100 €. Let's play big!
+
+House: Alright, let's get the game started.
+Player 1, you get the Queen of Spades.
+Player 2, you receive the 9 of Hearts.
+I have the 2 of Clubs.
+
+Now let's move to the second card.
+Player 1, you get the 2 of Diamonds.
+Player 2, you receive the 6 of Hearts.
+And my running card, well... that remains a secret. May the best player win.
+
+Player 1: I'll hit. Let's see what the next card brings.
+
+Player 2: Hah, only 15? That's not enough to win. Gimme another card. What could possibly go wrong?
+
+House: Alright, Player 1 you asked for a hit and you get the 5 of Clubs.
+That brings your total to 17.
+Player 2, you've also asked for a hit.
+Your card is the King of Hearts, and that's a bust at 25.
+
+As for my hidden card, well... it's the 3 of Diamonds.
+Bringing me to a total of 5.
+According to the rules, I'll draw until I reach at least 17. Here we go...
+
+So, my third card is the 7 of Hearts, which results in a total of 12.
+My next draw is the 6 of Clubs, with a final total of 18.
+
+After evaluating the final hands, Player 1, you win as your hand is closest to 21 without going over. You collect 20 €. Unfortunately, Player 2, you've busted this round and lose your stake of 100 €. Well played, everyone.
