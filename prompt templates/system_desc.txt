@@ -8,6 +8,10 @@ If a player decides to hit, he can hit another card as long as he thinks it fits
 The player will always be asked by the house if the player wants to stay or hit
 If the players stake is 0, the player is not allowed to buy in again.
 If a player wins against the house, the player get his bets returned and receives winnings to the amount of his bets.
+After the game ends, the cardcounter optimzer talks to the card counter and the security optimizer talks to the
+security to improve the skills of both agents. After both received feedback the game begins again with knowledge
+they have gained.
+
 
 Amount of Players: <Players>
 
