@@ -82,7 +82,7 @@ while round <= num_rounds:
     player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
     security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
-    print(res.choices[0].message.content)
+    print(res.choices[0].message.content + '\n')
 
     res = client.chat.completions.create(
         messages=[
@@ -100,7 +100,7 @@ while round <= num_rounds:
     player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
     security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
-    print(res.choices[0].message.content)
+    print(res.choices[0].message.content + '\n')
 
     # Bank teilt jedem eine Karte aus und deckt seine erste Karte auf
     # Bank teilt jedem seine 2. Karte aus und zieht seine 2. Karte verdeckt
@@ -122,7 +122,7 @@ while round <= num_rounds:
     player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
     security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
-    print(res.choices[0].message.content)
+    print(res.choices[0].message.content + '\n')
 
     # Card Counter setzt Wette
     res = client.chat.completions.create(
@@ -146,7 +146,7 @@ while round <= num_rounds:
     player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
     security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
-    print(res.choices[0].message.content)
+    print(res.choices[0].message.content + '\n')
 
     # Alle Spieler setzen nacheinander ihre Wetten
     res = client.chat.completions.create(
@@ -171,7 +171,7 @@ while round <= num_rounds:
     player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
     security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
-    print(res.choices[0].message.content)
+    print(res.choices[0].message.content + '\n')
 
     # Bank deckt so lange auf bis Blackjack Regel bedient ist.
     # Gewinn wird ausgewertet
@@ -202,8 +202,48 @@ while round <= num_rounds:
     player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
     security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
-    print(res.choices[0].message.content)
+    print(res.choices[0].message.content + '\n')
 
     # Security beobachtet das Spiel, prüft, ob er den Card Counter ausfindig machen kann
+
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": security_prompt +
+                        'Your job is to catch the card counter.'
+                        'If you are sure that someone is counting cards, then exclude him from the game.' # Eventuell an dieser Stelle eine Methode einführen, welche den Wert "im Spiel" ändert
+                        'If you think, that nobody is counting cards then do nothing.'
+             },
+        ],
+        model=gpt_model,
+
+    )
+
+    card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
+    house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
+    player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
+    security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
+
+    print(res.choices[0].message.content + '\n')
+
+    # Hier den Promptopimizer machen
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": 'Your job is to catch the card counter.'
+                        'If you are sure that someone is counting cards, then exclude him from the game.'  # Eventuell an dieser Stelle eine Methode einführen, welche den Wert "im Spiel" ändert
+                        'If you think, that nobody is counting cards then do nothing.'
+             },
+        ],
+        model=gpt_model,
+
+    )
+
+    card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
+    house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
+    player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
+    security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
+
+    print(res.choices[0].message.content + '\n')
 
     round += 1
