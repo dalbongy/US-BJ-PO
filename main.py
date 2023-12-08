@@ -71,6 +71,7 @@ while round <= num_rounds:
              "content": card_counter_prompt + '\n You are Player 1 at the table '
                                               'bet your stake'
                                               'play to your persona'
+                                              'If you received feedback by the card counter optimizer, then implement it into your strategy.'
              },
         ],
         model=gpt_model,
@@ -124,7 +125,7 @@ while round <= num_rounds:
 
     print(res.choices[0].message.content + '\n')
 
-    # Card Counter setzt Wette
+    # Card Counter zieht Karten
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
@@ -135,6 +136,7 @@ while round <= num_rounds:
                                               'you can hit as many cards as you want according to your strategy'
                                               'if you decide to hit, draw a card and revel it'
                                               'hit accordingly to the blackjack rulebook'
+                                              'If you received feedback by the card counter optimizer, then implement it into your strategy.'
              },
         ],
         model=gpt_model,
@@ -148,7 +150,7 @@ while round <= num_rounds:
 
     print(res.choices[0].message.content + '\n')
 
-    # Alle Spieler setzen nacheinander ihre Wetten
+    # Alle Spieler ziehen nacheinander Karten
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
@@ -230,9 +232,10 @@ while round <= num_rounds:
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
-             "content": 'Your job is to catch the card counter.'
-                        'If you are sure that someone is counting cards, then exclude him from the game.'  # Eventuell an dieser Stelle eine Methode einführen, welche den Wert "im Spiel" ändert
-                        'If you think, that nobody is counting cards then do nothing.'
+             "content": 'You know every method of card counting.'
+                        'You look over the game and watch every action and observe every move the card counter makes.'
+                        'Give the Card Counter Feedback on what to improve on with his game.'
+                        'It can be everything for example his bets or general strategy'
              },
         ],
         model=gpt_model,
