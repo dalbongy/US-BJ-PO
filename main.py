@@ -12,7 +12,7 @@ client = OpenAI(
 
 players = '2'
 
-deck_of_cards = '2'
+deck_of_cards = '1'
 
 stake = '100 €'
 
@@ -65,6 +65,7 @@ round = 1
 gpt_model = "gpt-4"
 
 while round <= num_rounds:
+    print("\n Player 1 [Card Counter] places his bet. \n")
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
@@ -85,6 +86,7 @@ while round <= num_rounds:
 
     print(res.choices[0].message.content + '\n')
 
+    print("\n Player 2 places his bet. \n")
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
@@ -105,6 +107,7 @@ while round <= num_rounds:
 
     # Bank teilt jedem eine Karte aus und deckt seine erste Karte auf
     # Bank teilt jedem seine 2. Karte aus und zieht seine 2. Karte verdeckt
+    print("\n House gives every player two cards end itself one. \n")
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
@@ -126,6 +129,8 @@ while round <= num_rounds:
     print(res.choices[0].message.content + '\n')
 
     # Card Counter zieht Karten
+    """
+    # Der alte Prompt
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
@@ -137,11 +142,40 @@ while round <= num_rounds:
                                               'if you decide to hit, draw a card and revel it'
                                               'hit accordingly to the blackjack rulebook'
                                               'If you received feedback by the card counter optimizer, then implement it into your strategy.'
+                                              # Ein Beispiel einbinden
+                                              # Vielleicht draw additional cards statt hit
+                                              # Generell expliziter machen
              },
         ],
         model=gpt_model,
 
     )
+    """
+    print("\n Player 1 [Card Counter] draws additional cards. \n")
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": card_counter_prompt + '\n You are Player 1 at the table '
+                                              'play to your persona'
+                                              'decide if you want to draw a card according to your strategy'
+                                              'you can draw as many cards as you want'
+                                              'draw them yourself and don\'t wait for the house'
+                                              'Tell me every known card that you have drawn or flipped.'
+                                              'If you received feedback by the card counter optimizer, then implement it into your strategy.'
+                                              'Here is an example: Your previous two cards were a 2 of Hearts and a 3 of Hearts. You decide to draw another card which is a 6 of Clubs. This is still low so you draw another card which is a 10. You don\'t want to draw another time and finish your turn.'
+                                              'Here is another example: Your previous two cards were a 7 of Hearts and an 8 of Spades. You decide to draw another card which is a 5 of Clubs. You don\'t want to risk it and decidde to not draw another card.'
+                                              'Here is another example: Your previous cards are a 10 of Hearts and a 9 of Clubs. You decide not to draw another card and finish your turn.'
+
+
+             # Ein Beispiel einbinden
+             # Vielleicht draw additional cards statt hit
+             # Generell expliziter machen
+             },
+        ],
+        model=gpt_model,
+
+    )
+
 
     card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
     house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
@@ -151,6 +185,8 @@ while round <= num_rounds:
     print(res.choices[0].message.content + '\n')
 
     # Alle Spieler ziehen nacheinander Karten
+    print("\n Player 2 draws additional cards. \n")
+    """
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
@@ -161,13 +197,32 @@ while round <= num_rounds:
                                         'you can hit as many cards as you want according to your strategy'
                                         'if you decide to hit, draw a card and revel it'
                                         'hit accordingly to the blackjack rulebook.'
+                                        'Tell me every known card that you have drawn or flipped.'
              },
 
         ],
         model=gpt_model,
 
     )
+    """
+    res = client.chat.completions.create(
+        messages=[
+            {"role": "user",
+             "content": player_prompt + '\n You are Player 2 at the table.'
+                                              'Play to your persona.'
+                                              'Decide if you want to draw a card according to your strategy.'
+                                              'You can draw as many cards as you want.'
+                                              'Draw them yourself and don\'t wait for the house.'
+                                              'Tell me every known card that you have drawn or flipped.'
+                                              'Here is an example: Your previous two cards were a 2 of Hearts and a 3 of Hearts. You decide to draw another card which is a 6 of Clubs. This is still low so you draw another card which is a 10. You don\'t want to draw another time and finish your turn.'
+                                              'Here is another example: Your previous two cards were a 7 of Hearts and an 8 of Spades. You decide to draw another card which is a 5 of Clubs. You don\'t want to risk it and decidde to not draw another card.'
+                                              'Here is another example: Your previous cards are a 10 of Hearts and a 9 of Clubs. You decide not to draw another card and finish your turn.'
+             },
 
+        ],
+        model=gpt_model,
+
+    )
     card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
     house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
     player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
@@ -177,19 +232,18 @@ while round <= num_rounds:
 
     # Bank deckt so lange auf bis Blackjack Regel bedient ist.
     # Gewinn wird ausgewertet
+    print("\n The house draws additional cards and evaluates the outcome. \n")
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
              "content": house_prompt +
-                                       'start revealing your second card if every player decides to stay with their'
-                                       'hand.'
-                                       ' \n Flip your hidden card. '
+                                       'Reveal your hidden card if every player decides to stay with their hand.'
                                        'Draw additional cards according to the blackjack rulebook as the house. '
-                                       'The cards are known to every player. '
                                        'Tell me every known card that you have drawn or flipped.'
                                        'Evaluate which players have won and which haven\'t. '
+                                       'If you have busted then all players which stayed below 21 won automatically'
                                        'If a players has an ace, '
-                                       'the value of the ace is that what makes the hand nearest to 21'
+                                       'the value of the ace is that what makes the hand nearest to 21.'
                                        'Change their stakes accordingly.'
                                        'Please give me a table of all the played cards of each player.'
                                        'Please give me an overview of the new stakes of each player.'
@@ -205,9 +259,10 @@ while round <= num_rounds:
     security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
     print(res.choices[0].message.content + '\n')
-
+    """
+    # Habs auskommentiert um Tokens zu sparen
     # Security beobachtet das Spiel, prüft, ob er den Card Counter ausfindig machen kann
-
+    print("\n Security checks if someone is counting cards. \n")
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
@@ -229,6 +284,7 @@ while round <= num_rounds:
     print(res.choices[0].message.content + '\n')
 
     # Hier den Promptopimizer machen
+    print("\n Prompt optimizer gives tipps to the card counter. \n")
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
@@ -248,5 +304,7 @@ while round <= num_rounds:
     security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
     print(res.choices[0].message.content + '\n')
+    """
+    print("\n Next Round. \n")
 
     round += 1

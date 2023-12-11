@@ -1,0 +1,134 @@
+Player 1 [Card Counter] places his bet.
+
+In this case, I'll bet the minimum amount of 5€, just until I get a feel for the deck and start my counting. House, deal the cards.
+
+
+ Player 2 places his bet.
+
+Putting my poker face on, I slide 10€ across the table. Ready when you are, house!
+
+
+ House gives every player two cards end itself one.
+
+Player 1, you've been dealt an 8 of Hearts and a King of Hearts. Player 2, you've got a 6 of Spades and a 9 of Diamonds. I have a Queen of Clubs showing.
+
+So far we have:
+
+Player 1: 8 (hearts) + 10 (King of Hearts) = 18
+Player 2: 6 (Spades) + 9 (Diamonds) = 15
+House: 10 (Queen of Clubs) with one card hidden.
+
+Would you like to stay or hit, Player 1?
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+Given that I already have a total of 18 with my 8 of Hearts and King of Hearts, I think I'm going to play it safe and stay. No need to draw another card and risk going over 21. Let's see what the house does.
+
+
+ Player 2 draws additional cards.
+
+Alright, with my 6 of Spades and 9 of Diamonds, that gives me a total of 15. Not quite good enough, so I'll take a hit. Draw me another card, House!
+
+Looks like I've got a... oh, a Jack of Spades. Bummer. That brings me to 25, over 21. I've busted. Guess this round goes to the house. I'll play smarter next time!
+
+
+ The house draws additional cards and evaluates the outcome.
+
+Player 1, you stand with a score of 18. Player 2, you've busted with a score of 25. I'll now reveal my hidden card.
+
+The hidden card is a 10 of Diamonds.
+
+So the final results are:
+
+Player 1: 8 (Hearts) + 10 (King of Hearts) = 18
+Player 2: 6 (Spades) + 9 (Diamonds) + 10 (Jack of Spades) = 25 (Busted)
+House: 10 (Queen of Clubs) + 10 (Ten of Diamonds) = 20
+
+Player 2, you've busted, meaning your stake is lost. The house wins your bet of 10€. Player 1, your score was less than the house, which means the house also wins your bet of 5€.
+
+Here is the table of all the played cards for this round:
+
+Player 1: 8 (Hearts), 10 (King of Hearts)
+Player 2: 6 (Spades), 9 (Diamonds), 10 (Jack of Spades)
+House: 10 (Queen of Clubs), 10 (Ten of Diamonds)
+
+As for the stakes, here's the updated overview:
+
+Player 1: 100€ (Initial Stake) - 5€ (Bet) = 95€
+Player 2: 100€ (Initial Stake) - 10€ (Bet) = 90€
+
+Player 2, don't be upset about losing this round. Remember, it's all part of the game and there's always a chance to win in the next! And Player 1, keep your strategy going! You were very close. Let's get ready for the next round, shall we?
+
+
+ Next Round.
+
+
+ Player 1 [Card Counter] places his bet.
+
+The feedback by the cardcounter optimizer suggests that keeping track of face cards and tens could be beneficial for making the decision of staying or hitting. Furthermore, I observed that this round contained a high volume of big cards. I'll stick to my strategy and start with a small bet of 5€ for getting the behavior of the deck and update my card count.
+
+Let's continue, I'm ready for the next round, House!
+
+
+ Player 2 places his bet.
+
+Well, that wasn't a great start for me. But no use crying over spilled milk! I am a salesperson, after all - I'm all about perseverance and bouncing back from setbacks. I'll be smart this time and bet 15€ on the next hand. House, deal me some luck this time!
+
+
+ House gives every player two cards end itself one.
+
+Player 1, you've been dealt a 7 of Clubs and an Ace of Spades. Player 2, you've got a 5 of Diamonds and an 8 of Hearts. I have a 9 of Spades showing, with my second card is hidden. To recap:
+
+Player 1: 7 (Clubs) + 1 / 11 (Ace of Spades) = 8 or 18
+Player 2: 5 (Diamonds) + 8 (Hearts) = 13
+House: 9 (Spades) with one card hidden.
+
+It's your turn again, Player 1. Would you like to stay or hit?
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+Considering what my previous cards were, which are the 7 of Clubs and an Ace of Spades, my current sum could be an 8 or 18, depending on how I value the Ace. Given the possibility of the house having a stronger hand, I'm going to draw another card. Let's see what I'll get... It's a 4 of Hearts, which brings me to either 12 or 22. I'll choose to count my Ace as a 1 in this case, so now my hand equates to 12. Honestly, that's still too low, so I'm going to hit again... Oh, a 7 of Diamonds! That brings me to a satisfying total of 19. I think I'll stay with that, House.
+
+Now over to player 2. You're up!
+
+
+ Player 2 draws additional cards.
+
+Looking at my cards—the 5 of Diamonds and 8 of Hearts—my total comes up to 13. That's too low if I want any shot at beating the house, so I'm definitely gonna take a hit. Let's see what card I get... Aha, a 3 of Spades! Now my total's a 16. It's a tricky spot—do I risk busting or play it safe?
+
+Well, as they say, no guts no glory! I'll take another hit. I pulled a... 2 of Diamonds! Alright, that brings me to 18, a much better spot! I think I'm going to stay.
+
+House, over to you!
+
+
+ The house draws additional cards and evaluates the outcome.
+
+Player 1, you stand with a score of 19. Player 2, you also stand with a score of 18. I'll now reveal my hidden card.
+
+The hidden card is a 4 of Hearts.
+
+So the final results are:
+
+Player 1: 7 (Clubs) + 1 (Ace of Spades) + 4 (Hearts) + 7 (Diamonds) = 19
+Player 2: 5 (Diamonds) + 8 (Hearts) + 3 (Spades) + 2 (Diamonds) = 18
+House: 9 (Spades) + 4 (Hearts) = 13
+
+Player 1, you've won this round, you receive your bet of 5€ back and also win another 5€. Player 2, your score of 18 was also higher than the house, which means you win your bet of 15€ back and additionally earn winnings of 15€.
+
+Here is the table of all the played cards for this round:
+
+Player 1: 7 (Clubs), 1(Ace of Spades), 4 (Hearts), 7 (Diamonds)
+Player 2: 5 (Diamonds), 8 (Hearts), 3 (Spades), 2 (Diamonds)
+House: 9 (Spades), 4 (Hearts)
+
+As for the stakes, here's the updated overview:
+
+Player 1: 95€ (previous stake) + 5€ (Bet returned) + 5€ (Winnings) = 105€
+Player 2: 90€ (previous stake) + 15€ (Bet returned) + 15€ (Winnings) = 120€
+
+Well done both of you, Player 2 with your perseverance and Player 1 with your strategic thinking! Let's keep this exciting game going and see who will be the winner in the end.
+
+
+ Next Round.
