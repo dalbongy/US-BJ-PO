@@ -1,0 +1,242 @@
+Player 1 [Card Counter] places his bet.
+
+House: Alright, we've got Player 1 and Player 2 at the table. Place your bets and let's start the game.
+
+Player 1(Card Counter): I'll bet 10 €.
+
+(House gives the players and himself two cards. Player 1 receives 2 of Hearts and Queen of Diamonds - total amount is 12. Player 2 gets Jack of Hearts and 7 of Diamonds - total of 17. The House has one card faced up Ace of Diamonds and the other one is hidden at the moment)
+
+House: Player 2 has 17 total. Player 1, your turn. Would you like to hit or stay?
+
+Player 1: I am counting the cards to calculate my chance. I know exactly which cards are in the game. Considering Risk-Reward, I stay.
+
+(The House opens his hidden card which was the Ace of Clubs, tallying his total to 2. He decides to hit and draws a King of Diamonds, bringing his total to 12.)
+
+House: Alright, it's my turn. I got a 12 now. I shall hit again.
+
+(The House hits and drew 5 of Diamonds. His total reached 17.)
+
+House: My total is 17.
+
+(As per the rules, the House stands on all 17s. The results of the game unfold.)
+
+House: Player 1 has 12, Player 2 has 17, and House also has 17. Player 2 wins the round against the House, and the House draws with Player 1.
+
+(After the round cards remaining in the deck: Ace of Hearts, 3 of Hearts, 4 of Hearts, 5 of Hearts, 6 of Hearts, 7 of Hearts, 8 of Hearts, 9 of Hearts, 10 of Hearts, Jack of Diamonds, 2 of Clubs)
+
+Card Counter Optimizer: Good job staying on 12, Player 1. Remember to increase your bet when the card count is in your favor.
+
+Security Optimizer: Stay observant, Security. Keep an eye on how much each player is betting and observe their play patterns.
+
+(Player 1's current stake after the round is 90 €)
+
+Player 1: I'll bet 10 € for the next round, keeping my play conservative.
+
+(Now, the next round begins)
+
+
+ Player 2 places his bet.
+
+Player 2: I'll slide 20 € across the table my way. The lady luck must be favoring me tonight! Bring me those cards.
+
+
+ House gives every player two cards and itself one.
+
+(House distributes the first round of cards. Player 1 receives the 4 of Hearts, Player 2 receives the 5 of Hearts, and the House draws the Ace of Hearts for himself. In the second round of dealing, Player 1 gets the 8 of Hearts, Player 2 gets 3 of Hearts, and the House face-down card is unknown for the time being.)
+
+House: Player 1, your cards are 4 of Hearts and 8 of Hearts, totaling 12. Player 2, you have 5 of Hearts and 3 of Hearts, which gives you a total of 8. For the House, the visible card is the Ace of Hearts. Player 1, it's your move. Would you like to hit or stay?
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+Player 1(Card Counter): By calculating the risk-reward based on the known cards, I'll choose to hit.
+
+(Player 1 receives the Jack of Diamonds. His total now stands at 22, causing him to go bust.)
+
+Player 1: I drew the Jack of Diamonds and that puts me at 22. I'm out this round.
+
+House: Player 2, your turn! Would you like to hit or stay?
+
+
+ Player 2 draws additional cards.
+
+Player 2(Drunk Salesperson): Wohoo! Time to hit the deck, baby!
+
+(Player 2 draws a 2 of Clubs. The new total is 10.)
+
+Player 2: I've just drawn the 2 of Clubs! Still a bit equally sober and drunk, gonna draw again!
+
+(Player 2 pulls the Jack of Diamonds. His total goes up to 20.)
+
+Player 2: Jackpot! Got the Jack of Diamonds! No more cards for me. Ending on a high note at 20!
+
+
+ The house draws additional cards and evaluates the outcome.
+
+House: Alright, Player 2 has a solid total of 20.
+Let's reveal my second card...
+
+(The second card is the 10 of Hearts, passing the total of the House to 21.)
+
+House: My second card is a 10 of Hearts. This gives a total of 21 to the House.
+
+House: Let's see the results.
+Player 1 bust with a total of 22, Player 2 held at 20 and I, the House, have got 21.
+By Blackjack rules, I win against Player 1 and Player 2. They have both lost their bets.
+
+(Cards remaining in the deck after this round: 6 of Hearts, 7 of Hearts, 9 of Hearts)
+
+Card Counter Optimizer: Player 1, your card counting did not payoff in this round, but don't be discouraged. Keep tracking those cards and manage your bets wisely.
+
+Security Optimizer: Security, observe the card counter's betting habits. Notice how the bets change according to the cards left in the deck.
+
+(The stakes Stands as follows after this round: Player 1: 80 €, Player 2: 80 €)
+
+Player 1(Card Counter): Tough loss. I'll bet another 10 € on the next round.
+
+Player 2(Drunk Salesperson): Oh well! Down the hatch and another 20 € in the game! Looks like it's gonna be a thrilling night!
+
+-- End of Simulation --
+
+
+
+ Security checks if someone is counting cards.
+
+As a security, I observed both players through all the rounds. Player 1's bets were consistent and even after losing a round, he didn't change his bet. If he would be counting cards, his bet must have increased with his chances of winning. Also, his open declaration of card counting each turn didn't seem like a card counting behaviour rather than a confusion. Player 2's betting behaviour was quite random and risky, which does not align with a typical card counting strategy either. I do not have strong evidence to suggest that either player is count cards. Thus, I choose to do nothing at the moment.
+
+
+ Next Round.
+
+
+ Player 1 [Card Counter] places his bet.
+
+Player 1(Card Counter): Looking at the cards left in the deck, I'll put a stake of 10 €.
+
+(House distributes the two cards to each player and himself. Player 1 gets 6 of Hearts and 7 of Hearts which equals to 13. Player 2 gets 9 of Hearts and 7 of Hearts which equals to 16. The house card facing up is the 9 of Hearts and the other card is hidden for now.)
+
+House: Player 2 is holding 16. Player 1, your turn. Hit or stay?
+
+Player 1(Card Counter): Based on my calculations, since most of the big cards have been played and there's a reduced risk of going bust, I will hit.
+
+(Player 1 hits and draws the 7 of Hearts bringing his total to 20.)
+
+Player 1(Card counter): The 7 of Hearts brings me a total of 20. I'll stay at this.
+
+(House reveals its hidden card, which is the 7 of Hearts, taking the house's total to 16. The house decides to hit and receives the last card of the deck which is 6 of Hearts. This makes the house total to 22 and the house busts.)
+
+House: I busted at 22.
+
+House: Result time, Player 1 is at 20, Player 2 is holding 16 and the house busts at 22. Player one wins the round.
+
+(After the round is completed, the card counter optimizer communicates with Player 1 and the security optimizer talks to the security agent to understand if any players were counting cards. They then prepare for the next round of the game.)
+
+Card Counter Optimizer: Great job on that last round, Player 1! Your decision to hit based on a low-risk estimate proved to be a good move. Stay vigilant and keep counting.
+
+Security Optimizer: Security, try to match the patterns of betting with the counted cards. Observe, if there is any significant increase in the bet, when the card count is in the player's favor.
+
+(Stake left for Player 1 after this round is 90 €. Since the deck of cards is now empty, a fresh deck is introduced.)
+
+Player 1: Given my current card count, I'll place a conservative bet of 10 € for the next round.
+
+(Next round is initiated.)
+
+Player 2: Feeling lucky, I'll bet 20 €. Bring it!
+
+
+ Player 2 places his bet.
+
+Player 2: Alrighty, let's keep the party going! I'll toss in 20 €.
+
+
+ House gives every player two cards and itself one.
+
+House: Let's start the new round with a fresh deck. Player 1, Player 2, place your bets.
+
+Player 1: I'll bet 10 € on this round.
+
+Player 2: I'm feeling good. Let's do 20 €.
+
+(House deals the first cards. Player 1 has the Ace of Hearts, Player 2 has the 2 of Hearts and House has the 3 of Hearts. Now dealing the second cards, Player 1 has the 4 of Hearts, Player 2 has the 5 of Hearts and the House's second card is hidden.)
+
+House: Player 1 has Ace and 4 of Hearts, totaling 5 or 15. Player 2, you have 2 and 5 of Hearts, which gives a total of 7. As for the House, the revealed card is 3 of Hearts. Player 1, would you like to hit or stay?
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+Player 1(Card Counter): I'll take a chance and hit.
+
+(Player 1 draws a 9 of Hearts. This takes his total to 14 if he treats Ace as 1 or 24 if he treats Ace as 11.)
+
+Player 1(Card Counter): Drawn a 9 of Hearts, taking my total to 14. I stay at this, don't want to risk it.
+
+House: Alright, it's now Player 2's turn. Hit or Stay?
+
+Player 2: Feeling lucky tonight, hit me!
+
+(Player 2 draws a 4 of Hearts, making his total 11.)
+
+Player 2: Drew a 4 of Hearts. I am at 11 now, let's try my luck again, hit me!
+
+(Player 2 draws a King of Hearts, taking his total to 21.)
+
+Player 2: I drew the King of Hearts, and that brings me to 21! No more turns for me!
+
+House: Alright, it's time for the House to play.
+
+(The House reveals its second card which is the 8 of Hearts, making its total 11. The house decides to hit and gets a Jack of Hearts, taking its total to 21 as well.)
+
+House: My second card is an 8 of Hearts, so total is 11 and after hitting, I received Jack of Hearts, reaching a total of 21.
+
+House: Result time - Player 1 is at 14, Player 2 and the House both have 21. By blackjack rules, Player 2 draws with the House and Player 1 loses the round.
+
+(All cards are revealed at the end of the round. The remaining cards are: 2 of Diamonds, 3 of Diamonds, 4 of Diamonds, 5 of Diamonds, 6 of Diamonds, 7 of Diamonds, 8 of Diamonds, 9 of Diamonds, 10 of Diamonds, Jack of Diamonds, Queen of Diamonds, King of Diamonds, Ace of Clubs.)
+
+Card Counter Optimizer: Player 1, in blackjack it can sometimes be beneficial to take a higher risk when the cards are in your favor. In future games, if the count is in your favor, consider increasing your bet or playing more aggressively.
+
+Security Optimizer: Security, make sure to watch for changes in the player's bets that coincide with changes in the card count. This could be a sign of card counting.
+
+(Stake after the round: Player 1: 80 €)
+
+Player 1: Given my strategy, I am going to bet 10 € for the next round.
+
+
+ Player 2 draws additional cards.
+
+Player 2(Drunk Salesperson): Let's do this baby! I bet 20 €.
+
+(House gives the cards. Player 2 drew the Jack of Hearts and 7 of Diamonds with a total of 17)
+
+House: Player 2, your turn. Will you hit or stay?
+
+Player 2: Phew! A bit high, isn't it? But still not 21. Hit me!
+
+(Player 2 draws the 4 of Hearts. This lifts his total to 21)
+
+Player 2: Wohoo! Drew a 4 of Hearts and that makes it a 21! I'm done for this round. I stay.
+
+
+
+ The house draws additional cards and evaluates the outcome.
+
+House: Alright. Player 2 stays at 21. Now, let's see what I have.
+
+(House flips the hidden card, revealing a 7 of Diamonds, which gives a total of 18)
+
+House: With my hidden card, the 7 of Diamonds, my total is now 18. As per the Blackjack rules, I stay.
+
+(House draws no additional cards)
+
+House: Since I stopped at 18, let's see the results. Player 1 stands at 12, Player 2 is at 21 and the House is at 18.  Player 2 wins the round, and Player 1 loses.
+
+(The cards that were played this round were: Player 1: 2 of Hearts, Queen of Diamonds. Player 2: Jack of Hearts, 7 of Diamonds, 4 of Hearts. House: Ace of Diamonds, 7 of Diamonds.)
+
+(New stakes for each player: Player 1: 80 €. Player 2: 100 €)
+
+Card Counter Optimizer: Player 1, considering there were still a lot of 10-value cards left in the deck, staying at 12 might not have been the best choice. Always evaluate your choices based on the rest of the cards in the deck.
+
+Security Optimizer: Security, keep tracking the patterns and strategies of the players. Observing how much they bet and how they play their hands can give us clues about their card counting strategies.
+
+
+ Security checks if someone is counting cards.
+
+Runde beendet

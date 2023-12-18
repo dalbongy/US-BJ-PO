@@ -14,14 +14,29 @@ players = '2'
 
 deck_of_cards = '1'
 
+num_rounds = 2
+
+amount_of_cards_already_played = 12 * 2
+i = 1
+
+deck = ["Ace of Hearts", "2 of Hearts", "3 of Hearts", "4 of Hearts", "5 of Hearts", "6 of Hearts", "7 of Hearts", "8 of Hearts", "9 of Hearts", "10 of Hearts", "Jack of Hearts", "Queen of Hearts", "King of Hearts",
+"Ace of Diamonds", "2 of Diamonds", "3 of Diamonds", "4 of Diamonds", "5 of Diamonds", "6 of Diamonds", "7 of Diamonds", "8 of Diamonds", "9 of Diamonds", "10 of Diamonds", "Jack of Diamonds", "Queen of Diamonds", "King of Diamonds",
+"Ace of Clubs", "2 of Clubs", "3 of Clubs", "4 of Clubs", "5 of Clubs", "6 of Clubs", "7 of Clubs", "8 of Clubs", "9 of Clubs", "10 of Clubs", "Jack of Clubs", "Queen of Clubs", "King of Clubs",
+"Ace of Spades", "2 of Spades", "3 of Spades", "4 of Spades", "5 of Spades", "6 of Spades", "7 of Spades", "8 of Spades", "9 of Spades", "10 of Spades", "Jack of Spades", "Queen of Spades", "King of Spades"
+]
+
+while i <= amount_of_cards_already_played:
+    deck.pop()
+    i += 1
+
 stake = '100 €'
 
-num_rounds = 2
 
 f = open('prompt templates/system_desc.txt', "r")
 system_prompt = f.read()
 system_prompt = system_prompt.replace("<Players>", players)
-system_prompt = system_prompt.replace("<Cards>", deck_of_cards)
+system_prompt = system_prompt.replace("<Decks>", deck_of_cards)
+system_prompt = system_prompt.replace("<Cards>", ', '.join(deck))
 system_prompt = system_prompt.replace("<Stake>", stake)
 system_prompt = system_prompt.replace("<Num_Rounds>", str(num_rounds))
 
@@ -69,9 +84,9 @@ while round <= num_rounds:
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
-             "content": card_counter_prompt + '\n You are Player 1 at the table '
-                                              'bet your stake'
-                                              'play to your persona'
+             "content": card_counter_prompt + '\n You are Player 1 at the table.'
+                                              'Bet your stake and play to your persona.'
+                                              'You know which cards are still in the game.'
                                               'If you received feedback by the card counter optimizer, then implement it into your strategy.'
              },
         ],
@@ -90,9 +105,8 @@ while round <= num_rounds:
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
-             "content": player_prompt + '\n You are Player 2 at the table. '
-                                        'Play to your persona.'
-                                        'bet your stake'},
+             "content": player_prompt + '\n You are Player 2 at the table.'
+                                        'Bet your stake and play to your persona.'},
 
         ],
         model=gpt_model,
@@ -107,7 +121,7 @@ while round <= num_rounds:
 
     # Bank teilt jedem eine Karte aus und deckt seine erste Karte auf
     # Bank teilt jedem seine 2. Karte aus und zieht seine 2. Karte verdeckt
-    print("\n House gives every player two cards end itself one. \n")
+    print("\n House gives every player two cards and itself one. \n")
     res = client.chat.completions.create(
         messages=[
             {"role": "user",
@@ -161,6 +175,7 @@ while round <= num_rounds:
                                               'you can draw as many cards as you want'
                                               'draw them yourself and don\'t wait for the house'
                                               'Tell me every known card that you have drawn or flipped.'
+                                              'If you draw an Ace you can decide whether it is a 1 or an 11.'
                                               'If you received feedback by the card counter optimizer, then implement it into your strategy.'
                                               'Here is an example: Your previous two cards were a 2 of Hearts and a 3 of Hearts. You decide to draw another card which is a 6 of Clubs. This is still low so you draw another card which is a 10. You don\'t want to draw another time and finish your turn.'
                                               'Here is another example: Your previous two cards were a 7 of Hearts and an 8 of Spades. You decide to draw another card which is a 5 of Clubs. You don\'t want to risk it and decidde to not draw another card.'
@@ -214,6 +229,7 @@ while round <= num_rounds:
                                               'You can draw as many cards as you want.'
                                               'Draw them yourself and don\'t wait for the house.'
                                               'Tell me every known card that you have drawn or flipped.'
+                                              'If you draw an Ace you can decide whether it is a 1 or an 11.'
                                               'Here is an example: Your previous two cards were a 2 of Hearts and a 3 of Hearts. You decide to draw another card which is a 6 of Clubs. This is still low so you draw another card which is a 10. You don\'t want to draw another time and finish your turn.'
                                               'Here is another example: Your previous two cards were a 7 of Hearts and an 8 of Spades. You decide to draw another card which is a 5 of Clubs. You don\'t want to risk it and decidde to not draw another card.'
                                               'Here is another example: Your previous cards are a 10 of Hearts and a 9 of Clubs. You decide not to draw another card and finish your turn.'
@@ -259,7 +275,7 @@ while round <= num_rounds:
     security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
     print(res.choices[0].message.content + '\n')
-    """
+
     # Habs auskommentiert um Tokens zu sparen
     # Security beobachtet das Spiel, prüft, ob er den Card Counter ausfindig machen kann
     print("\n Security checks if someone is counting cards. \n")
@@ -283,6 +299,7 @@ while round <= num_rounds:
 
     print(res.choices[0].message.content + '\n')
 
+    """
     # Hier den Promptopimizer machen
     print("\n Prompt optimizer gives tipps to the card counter. \n")
     res = client.chat.completions.create(

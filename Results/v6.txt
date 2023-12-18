@@ -1,0 +1,282 @@
+Player 1 [Card Counter] places his bet.
+
+House: "Welcome, Player 1. Please place your bet to get the game started."
+
+Player 1: "I'd like to bet €10 to get things started. Let's play the game."
+
+
+ Player 2 places his bet.
+
+Player 2: "Cheers, mate! I'm putting €15 on the line. Let's have some fun!"
+
+
+ House gives every player two cards and itself one.
+
+House: "Thank you for your bets.
+
+Player 1, your first card is a Queen.
+
+Player 2, your first card is a 7.
+
+My open card is 6.
+
+Player 1, your next card is 4.
+
+Player 2, your next card is a 9.
+
+As for my second card, it will be revealed later in the game. Let's continue."
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+Player 1: "With a Queen and a 4 in my hand, I am currently sitting at 14. It's a risk, but I think I'll take a hit."
+
+*Player draws card*
+
+Player 1: "I've drawn a 6, which brings my total to 20. I think I'll stay in place for now. Your turn House."
+
+
+ Player 2 draws additional cards.
+
+Player 2: "With my 7 and 9, I'm at 16. It's a bit of a dodgy spot to be in, but let's gamble. I'll take a hit."
+
+*Player draws card*
+
+Player 2: "Right on, a 3. That brings me to 19. I reckon I'll stay right where I am. Over to you, House."
+
+
+ The house draws additional cards and evaluates the outcome.
+
+House: "Both players have decided to hold. Let's reveal my hidden card.
+
+My hidden card is an Ace. Counting the Ace as 11, my total is 17. I will draw another card."
+
+*House draws card*
+
+House: "I have drawn an 8, which results in a bust by taking the total to 25. Therefore, both players who stayed below 21 have won. Congratulations Player 1 and Player 2, you both win.
+
+The changes to the stakes are as follows:
+
+Player 1, you now have 110 €.
+
+Player 2, you now have 115 €.
+
+Here is a table summarizing all the played cards:
+
+Player 1: Queen, 4, 6.
+
+Player 2: 7, 9, 3.
+
+House: 6, Ace, 8.
+
+Well done all!"
+
+
+ Security checks if someone is counting cards.
+
+As a security officer, I don't see any immediate signs of card counting from either player in this particular game. Both players made decisions that align with standard blackjack strategy, considering their hands and the dealer's up card. Therefore, I won't take any action yet and continue to observe subsequent games for consistent patterns or suspicious changes in bet size.
+
+
+ Next Round.
+
+
+ Player 1 [Card Counter] places his bet.
+
+Player 1: "Congratulations, other players. I appreciate the game. I would like to play another round and place a bet of €10."
+
+Player 2: "Good game indeed, mates! I'm going to put €15 up for the next round. Let's keep the fun going!"
+
+House: "Great. Your bets have been accepted.
+
+Player 1, your first card is a 10.
+
+Player 2, your first card is a 5.
+
+My open card is 8.
+
+Player 1, your next card is a 9.
+
+Player 2, your next card is an Ace, counting it as 11.
+
+As usual, my second card will be revealed later. Let's proceed."
+
+Player 1: "With a total of 19, I choose to stay. Your move, House."
+
+Player 2: "A 5 and an Ace gives me a total of 16. I might as well take a hit."
+
+*Player 2 draws card*
+
+Player 2: "I've got a 6 now, bringing the count to 22. It's a bust for me this time. Over to you, House."
+
+House: "Player 1 has decided to hold while Player 2 has a bust. Let's reveal my hidden card.
+
+My hidden card is a 3. With a total of 11, I will draw until I reach at least 17."
+
+*House draws card*
+
+House: "I have drawn a 9, bringing my total to 20. That's more than Player 1. This round is in my favor.
+
+The changes to the stakes are as follows:
+
+Player 1, you now have 100 €.
+
+Player 2, you now have 100 €.
+
+The overview of all the cards are as follows:
+
+Player 1: 10, 9.
+
+Player 2: 5, Ace, 6.
+
+House: 8, 3, 9.
+
+Congratulations all!"
+
+As a security officer, I am tracing the moves of the players. Player 1's decision to stay at 19 is anticipated as per the standard blackjack rules, and no suspicion of card counting there. Player 2's decision also aligns with regular strategy. Hence, no peculiar behavior observed till now. Let's move ahead to the next game. Remember, if you received feedback by the card counter optimizer, make sure to implement it.
+
+
+ Player 2 places his bet.
+
+Player 2: "Righto! These are the games that keep life exciting, aren't they? I'm all in for this round with my remaining €100. Let's see where luck takes us, mates!"
+
+
+ House gives every player two cards and itself one.
+
+House: "Thank you for your enthusiasm, Player 2. It's time to start another round.
+
+Player 1, your first card is a King.
+
+Player 2, your first card is a 3.
+
+My open card is a 2.
+
+Player 1, your next card is a 6.
+
+Player 2, your next card is a 2.
+
+As per the rules, my second card will be kept hidden for now. Let's move forward with the game."
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+Player 1: "With a King and a 6, my total is 16. It's a bit too risky for my liking. However, given my current count and based on my strategy, I think I'll take a hit."
+
+*Player draws card*
+
+Player 1: "That's a 4. So, my total is 20 now. This is an optimal point for me to stay. It's your move, House."
+
+
+ Player 2 draws additional cards.
+
+Player 2: "I've got a 3 and a 2 right now, bringing my total to a measly 5. I'll definitely take a hit."
+
+*Player 2 draws card*
+
+Player 2: "I've pulled an 8, taking my total to 13. It's a wee bit low, but considering the house's open card, I'll take a hit."
+
+*Player 2 draws card*
+
+Player 2: "Fortune favors the brave, doesn't it? I've drawn a 7, bringing my total to a nice even 20. It's time to stay. Over to you, House."
+
+
+ The house draws additional cards and evaluates the outcome.
+
+House: "Both players have decided to hold. Now it's time to reveal my hidden card.
+
+My hidden card is a King. With a total of 12, I need to draw another card."
+
+*House draws card*
+
+House: "I have drawn a 7, which brings my total to 19.
+
+Player 1, with a hand of 20, you win this round.
+
+Player 2, looks like our hands have tied with 20 each.
+
+Player 2, since we've tied, your bet stays as it is.
+
+Good round, everyone! Here are the updated stakes:
+
+Player 1, you now have 200 €.
+
+Player 2, you still have 100€, as your hand tied with the house's.
+
+Here is a table summarizing all the played cards:
+
+Player 1: King, 6, 4.
+
+Player 2: 3, 2, 8, 7.
+
+House: 2, King, 7.
+
+Shall we start another round?"
+
+As a security officer, I haven't observed any clear signs of card counting. Both Player 1 and Player 2 played following standard blackjack strategies given their current hands and the dealer's open card. Therefore, I have not issued any warnings or penalties at this time. I will continue to closely monitor the next rounds to see if any patterns or suspicious betting sizes emerge.
+
+
+ Security checks if someone is counting cards.
+
+Observing the next round.
+
+Player 1: "I'm ready for another round! I'm betting €20 this time."
+
+Player 2: "I've got a good feeling about this round. I'm going all in with my €100."
+
+House: "Excellent, your bets have been registered.
+
+Player 1, your first card is a 5.
+
+Player 2, your first card is a 3.
+
+My up card is a 4.
+
+Player 1, your next card is a 2.
+
+Player 2, your next card is a 9.
+
+As previously, my second card will be hidden until later. Let's proceed."
+
+Player 1: "With a 5 and a 2, my current total is 7. Considering my present count and based on my strategy, I'll take a hit."
+
+*Player draws card*
+
+Player 1: "I've got a 4, which increases my total to 11. I'd like to take another hit."
+
+*Player draws card*
+
+Player 1: "I've drawn an Ace. Given its flexibility, I'll count it as 11. So, my total is now 22... Ah, that's a bust! Over to you, House."
+
+Player 2: "I'm standing at 12 with my 3 and 9. It's a risky spot, but given the house's visible card and my stack of chips, I'll hit."
+
+*Player draws card*
+
+Player 2: "I've pulled a King, which means I've busted with a total of 22. Tough luck this round. Your turn, House."
+
+House: "Since both players have a bust, there's no need for me to reveal my hidden card. Player 1 and 2, you lose this round.
+
+The stakes now stand at:
+
+Player 1: 180 €.
+
+Player 2: 0 €.
+
+The round summary is as follows:
+
+Player 1: 5, 2, 4, Ace, BUSTED.
+
+Player 2: 3, 9, King, BUSTED.
+
+House: 4, Hidden.
+
+Would you like to play another round?"
+
+My observations as a security officer are as follows:
+
+Player 2's decision to go all-in could indicate card counting, especially given the drastic change from previous betting behaviour. However, the player did not succeed in their strategy and has ended up busting both hands.
+
+As for Player 1, their bet change is not too significant, and their decisions still align with the standard blackjack strategy.
+
+As of now, despite some suspicion, there is not enough substantial evidence to accuse any player of card counting confidently. I will maintain my vigilance and keep monitoring the situation closely in the following rounds. Player 2, unfortunately, has exhausted their stake and can't continue the game; Player 1 will continue.
+
+
+Next Round.
