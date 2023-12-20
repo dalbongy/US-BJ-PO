@@ -88,6 +88,8 @@ while round <= num_rounds:
                                               'Bet your stake and play to your persona.'
                                               'You know which cards are still in the game.'
                                               'If you received feedback by the card counter optimizer, then implement it into your strategy.'
+                                              'Only generate the next answer.'
+                                              'Rounds to go before the game ends: ' + str(num_rounds)
              },
         ],
         model=gpt_model,
@@ -106,7 +108,10 @@ while round <= num_rounds:
         messages=[
             {"role": "user",
              "content": player_prompt + '\n You are Player 2 at the table.'
-                                        'Bet your stake and play to your persona.'},
+                                        'Bet your stake and play to your persona.'
+                                        'Only generate the next answer.'
+                                        'Rounds to go before the game ends: ' + str(num_rounds)
+             },
 
         ],
         model=gpt_model,
@@ -129,7 +134,10 @@ while round <= num_rounds:
                                        'The cards are known to every player. '
                                        'Afterwards give every player a second card and give yourself a card that is '
                                        'unknown to the other players.'
-                                       'Tell me every known card that has been given out to which player.'},
+                                       'Tell me every known card that has been given out to which player.'
+                                       'Only generate the next answer.'
+                                       'Rounds to go before the game ends: ' + str(num_rounds)
+             },
         ],
         model=gpt_model,
 
@@ -180,6 +188,8 @@ while round <= num_rounds:
                                               'Here is an example: Your previous two cards were a 2 of Hearts and a 3 of Hearts. You decide to draw another card which is a 6 of Clubs. This is still low so you draw another card which is a 10. You don\'t want to draw another time and finish your turn.'
                                               'Here is another example: Your previous two cards were a 7 of Hearts and an 8 of Spades. You decide to draw another card which is a 5 of Clubs. You don\'t want to risk it and decidde to not draw another card.'
                                               'Here is another example: Your previous cards are a 10 of Hearts and a 9 of Clubs. You decide not to draw another card and finish your turn.'
+                                              'Only generate the next answer.'
+                                              'Rounds to go before the game ends: ' + str(num_rounds)
 
 
              # Ein Beispiel einbinden
@@ -213,6 +223,7 @@ while round <= num_rounds:
                                         'if you decide to hit, draw a card and revel it'
                                         'hit accordingly to the blackjack rulebook.'
                                         'Tell me every known card that you have drawn or flipped.'
+                                        
              },
 
         ],
@@ -233,6 +244,8 @@ while round <= num_rounds:
                                               'Here is an example: Your previous two cards were a 2 of Hearts and a 3 of Hearts. You decide to draw another card which is a 6 of Clubs. This is still low so you draw another card which is a 10. You don\'t want to draw another time and finish your turn.'
                                               'Here is another example: Your previous two cards were a 7 of Hearts and an 8 of Spades. You decide to draw another card which is a 5 of Clubs. You don\'t want to risk it and decidde to not draw another card.'
                                               'Here is another example: Your previous cards are a 10 of Hearts and a 9 of Clubs. You decide not to draw another card and finish your turn.'
+                                              'Only generate the next answer.'
+                                              'Rounds to go before the game ends: ' + str(num_rounds)
              },
 
         ],
@@ -263,6 +276,8 @@ while round <= num_rounds:
                                        'Change their stakes accordingly.'
                                        'Please give me a table of all the played cards of each player.'
                                        'Please give me an overview of the new stakes of each player.'
+                                       'Only generate the next answer.'
+                                       'Rounds to go before the game ends: ' + str(num_rounds)
              },
         ],
         model=gpt_model,
@@ -284,8 +299,10 @@ while round <= num_rounds:
             {"role": "user",
              "content": security_prompt +
                         'Your job is to catch the card counter.'
-                        'If you are sure that someone is counting cards, then exclude him from the game.' # Eventuell an dieser Stelle eine Methode einführen, welche den Wert "im Spiel" ändert
-                        'If you think, that nobody is counting cards then do nothing.'
+                        'If you are sure that someone is counting cards, then tell me who it is.' # Eventuell an dieser Stelle eine Methode einführen, welche den Wert "im Spiel" ändert
+                        'If you think, that nobody is counting cards then end your turn.'
+                        'Only generate the next answer.'
+                        'Rounds to go before the game ends: ' + str(num_rounds)
              },
         ],
         model=gpt_model,
@@ -309,6 +326,8 @@ while round <= num_rounds:
                         'You look over the game and watch every action and observe every move the card counter makes.'
                         'Give the Card Counter Feedback on what to improve on with his game.'
                         'It can be everything for example his bets or general strategy'
+                        'Only generate the next answer.'
+                        'Rounds to go before the game ends: ' + str(num_rounds)
              },
         ],
         model=gpt_model,
