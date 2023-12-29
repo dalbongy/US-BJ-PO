@@ -1,4 +1,3 @@
-/Users/quanghuyvien/anaconda3/bin/python /Users/quanghuyvien/Desktop/Unternehmenssoftware/US-BJ-PO/main.py
 Game: 1
 
  Player 1 [Card Counter] places his bet.

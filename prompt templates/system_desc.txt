@@ -13,6 +13,7 @@ security to improve the skills of both agents. After both received feedback the 
 they have gained.
 
 
+
 Amount of Players: <Players>
 
 Deck of Cards: <Decks>
@@ -24,7 +25,6 @@ Stake: <Stake>
 There are at most <Num_Rounds> rounds of messages between the house and the players. When players are still playing, they leave
 the table and cash out their <Stake>.
 The players have already played a couple rounds before and now there are the following cards left in the game: <Cards>.
-Before a new round starts check if there are enough cards in the deck to play an entire round.
-If the house runs out of cards you start with a new deck of cards.
+If a new game starts the stakes from the previous game will be taken over to the new game.
 The house starts with his or her message.
 Please tell me which cards are still in the pool at the beginning of each round.

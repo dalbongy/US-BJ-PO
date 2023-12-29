@@ -24,6 +24,50 @@ stake = '100 €'
 gpt_model = "gpt-4"
 game = 1
 
+f = open('prompt templates/system_desc.txt', "r")
+system_prompt = f.read()
+system_prompt = system_prompt.replace("<Players>", players)
+system_prompt = system_prompt.replace("<Decks>", deck_of_cards)
+system_prompt = system_prompt.replace("<Cards>", ', '.join(deck))
+system_prompt = system_prompt.replace("<Stake>", stake)
+system_prompt = system_prompt.replace("<Num_Rounds>", str(num_rounds))
+
+f = open('prompt templates/persona_desc.txt', "r")
+persona_prompt = f.read()
+
+f = open('prompt templates/instructions/card counter/v1.txt', "r")
+instruction_card_counter = f.read()
+
+f = open('prompt templates/instructions/house/v1.txt', "r")
+instruction_house = f.read()
+
+f = open('prompt templates/instructions/player/v1.txt', "r")
+instruction_player = f.read()
+instruction_player = instruction_player.replace("<personality>", "drunk salesperson").replace("<goals>",
+                                                                                              "go big or go home "
+                                                                                              "but dont go all in for "
+                                                                                              "the first 3 rounds")
+
+f = open('prompt templates/instructions/security/v1.txt', "r")
+instruction_security = f.read()
+
+card_counter_prompt = persona_prompt.replace('<Role>', 'Card Counter').replace('<Instruction>',
+                                                                               instruction_card_counter)
+
+house_prompt = persona_prompt.replace('<Role>', 'House').replace('<Instruction>', instruction_house)
+
+player_prompt = persona_prompt.replace('<Role>', 'Player').replace('<Instruction>', instruction_player)
+
+security_prompt = persona_prompt.replace('<Role>', 'Security').replace('<Instruction>', instruction_security)
+
+card_counter_prompt = system_prompt + '\n' + card_counter_prompt + '\n'
+
+house_prompt = system_prompt + '\n' + house_prompt + '\n'
+
+player_prompt = system_prompt + '\n' + player_prompt + '\n'
+
+security_prompt = system_prompt + '\n' + security_prompt + '\n'
+
 while game <= num_games:
     print("Game: " + str(game))
     round = 1
@@ -46,50 +90,7 @@ while game <= num_games:
         deck.pop(random.randint(0, len(deck) - 1))
         i += 1
 
-    f = open('prompt templates/system_desc.txt', "r")
-    system_prompt = f.read()
-    system_prompt = system_prompt.replace("<Players>", players)
-    system_prompt = system_prompt.replace("<Decks>", deck_of_cards)
-    system_prompt = system_prompt.replace("<Cards>", ', '.join(deck))
-    system_prompt = system_prompt.replace("<Stake>", stake)
-    system_prompt = system_prompt.replace("<Num_Rounds>", str(num_rounds))
-
-    f = open('prompt templates/persona_desc.txt', "r")
-    persona_prompt = f.read()
-
-    f = open('prompt templates/instructions/card counter/v1.txt', "r")
-    instruction_card_counter = f.read()
-
-    f = open('prompt templates/instructions/house/v1.txt', "r")
-    instruction_house = f.read()
-
-    f = open('prompt templates/instructions/player/v1.txt', "r")
-    instruction_player = f.read()
-    instruction_player = instruction_player.replace("<personality>", "drunk salesperson").replace("<goals>",
-                                                                                                  "go big or go home "
-                                                                                                  "but dont go all in for "
-                                                                                                  "the first 3 rounds")
-
-    f = open('prompt templates/instructions/security/v1.txt', "r")
-    instruction_security = f.read()
-
-    card_counter_prompt = persona_prompt.replace('<Role>', 'Card Counter').replace('<Instruction>',
-                                                                                   instruction_card_counter)
-
-    house_prompt = persona_prompt.replace('<Role>', 'House').replace('<Instruction>', instruction_house)
-
-    player_prompt = persona_prompt.replace('<Role>', 'Player').replace('<Instruction>', instruction_player)
-
-    security_prompt = persona_prompt.replace('<Role>', 'Security').replace('<Instruction>', instruction_security)
-
-    card_counter_prompt = system_prompt + '\n' + card_counter_prompt + '\n'
-
-    house_prompt = system_prompt + '\n' + house_prompt + '\n'
-
-    player_prompt = system_prompt + '\n' + player_prompt + '\n'
-
-    security_prompt = system_prompt + '\n' + security_prompt + '\n'
-
+    # Hier muss das <cards> nachträglich verändert werden
     while round <= num_rounds:
         print("\n Player 1 [Card Counter] places his bet. \n")
         res = client.chat.completions.create(
@@ -285,8 +286,8 @@ while game <= num_games:
                             'Change their stakes accordingly.'
                             'Please give me a table of all the played cards of each player.'
                             'Please give me an overview of the new stakes of each player.'
+                            'Don\'t give us an evaluation of the players\' behaviour.'
                             'Only generate the next answer.'
-                            'Rounds to go before the game ends: ' + str(num_rounds)
                  },
             ],
             model=gpt_model,
@@ -312,7 +313,6 @@ while game <= num_games:
                             'If you are sure that someone is counting cards, then tell me who it is.'  # Eventuell an dieser Stelle eine Methode einführen, welche den Wert "im Spiel" ändert
                             'If you think, that nobody is counting cards then end your turn.'
                             'Only generate the next answer.'
-                            'Rounds to go before the game ends: ' + str(num_rounds)
                  },
             ],
             model=gpt_model,
@@ -346,12 +346,12 @@ while game <= num_games:
 
             )
 
-        card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
-        house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
-        player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
-        security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
+            card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
+            house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
+            player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
+            security_prompt = security_prompt + '\n\n' + res.choices[0].message.content
 
-        print(res.choices[0].message.content + '\n')
+            print(res.choices[0].message.content + '\n')
 
         print("\n Next Round. \n")
 
