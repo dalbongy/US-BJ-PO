@@ -1,5 +1,5 @@
-1. Promptoptimizer
-2. Mehr Spieler
+1. Promptoptimizer check
+2. Mehr Spieler (optional)
 3. Mehr Runden
 4. Manueller Shuffel mit anschließendem .pop()
 5. Nach jeder Runde warten um Tokens zu refreshen

@@ -1,0 +1,407 @@
+/Users/quanghuyvien/anaconda3/bin/python /Users/quanghuyvien/Desktop/Unternehmenssoftware/US-BJ-PO/main.py
+Game: 1
+
+ Player 1 [Card Counter] places his bet.
+
+I bet 10€. I count the cards, raising my bets when the odds are in my favour. I implement feedback from the optimizer on my strategy.
+
+
+ Player 2 places his bet.
+
+I bet 20€. I play cautiously, trying to not draw attention to myself. I'll count cards subtly and use optimizer feedback.
+
+
+ House gives every player two cards and itself one.
+
+The first player receives the Ace of Spades and 6 of Diamonds. The second player receives the Ace of Diamonds and 10 of Clubs. The house starts with the 7 of Hearts shown and a card hidden.
+
+Rounds left before the game ends: 1
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+I draw a 4 of Hearts, bringing my total to 21. I decide to finish my turn now.
+
+
+ Player 2 draws additional cards.
+
+With Ace as 11 and 10 of Clubs, I have 21. No need to draw another card, I'll stay.
+
+
+ The house draws additional cards and evaluates the outcome.
+
+The house reveals the hidden card, which is the 8 of Hearts. This results in a sum of 15 for the house. According to blackjack rule book, I have to draw until 17 or higher, I draw the 2 of Hearts. Now, the sum is 17.
+
+The evaluation: Both players have a blackjack (Ace and a 10 point card), while the house has 17. Both players win this round.
+
+Cards played this round:
+Player 1: Ace of Spades, 6 of Diamonds, 4 of Hearts
+Player 2: Ace of Diamonds, 10 of Clubs
+House: 7 of Hearts, 8 of Hearts, 2 of Hearts
+
+New stakes:
+Player 1: Stake is 110€ (compensation for his bet + winnings)
+Player 2: Stake is 140€ (compensation for his bigger bet + winnings)
+
+Final round begins.
+
+
+ Security checks if someone is counting cards.
+
+Observation: Both players seem to be playing strategically but there is no sure sign of card counting. The first player's decision to draw at 17 and getting a 4, resulting in a perfect 21, could be just luck or skill. The second player got a blackjack right away which indicates good fortune. The fact they both play based on the feedback from optimizer might just be them trying to improve their individual game.
+
+There are no undeniable proof of card counting as of now, but I will keep observing. At this point, I cannot confidently accuse either player of counting cards. The game will continue. The remaining rounds left: 2.
+
+Observation: Both players seem to be playing strategically but there is no sure sign of card counting. The first player's decision to draw at 17 and getting a 4, resulting in a perfect 21, could be just luck or skill. The second player got a blackjack right away which indicates good fortune. The fact they both play based on the feedback from optimizer might just be them trying to improve their individual game.
+
+There are no undeniable proof of card counting as of now, but I will keep observing. At this point, I cannot confidently accuse either player of counting cards. The game will continue. The remaining rounds left: 2.
+
+
+ Next Round.
+
+
+ Player 1 [Card Counter] places his bet.
+
+I place a bet of 30€. Taking count of the cards, I plan my moves carefully while incorporating the optimizer's feedback into my strategy.
+
+
+ Player 2 places his bet.
+
+I'll go with a 25€ bet, keeping the game light and fun, subtly counting as I chatter.
+
+
+ House gives every player two cards and itself one.
+
+The first player receives the Queen of Clubs and 4 of Diamonds. The second player receives the 6 of Clubs and 7 of Diamonds. The house starts with the 7 of Spades shown and a card hidden.
+
+Cards handed out this round:
+Player 1: Queen of Clubs, 4 of Diamonds
+Player 2: 6 of Clubs, 7 of Diamonds
+House: 7 of Spades
+
+Rounds left before the game ends: 1
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+With Queen of Clubs and 4 of Diamonds, my total is 14. I decide to draw another card - 2 of Clubs. Now, I have 16. It's too risky to draw another, I'll stay.
+
+
+ Player 2 draws additional cards.
+
+With 6 of Clubs and 7 of Diamonds, I got 13. I'll draw another card - 4 of Spades. Now, I have 17. I'll stay.
+
+
+ The house draws additional cards and evaluates the outcome.
+
+The house reveals the hidden card, which is the 8 of Clubs. This results in a sum of 15 for the house. According to blackjack rule book, I have to draw until 17 or higher, I draw the 3 of Hearts. Now, the sum is 18.
+
+The evaluation: Both players have 16 and 17 and the house has 18. The house wins this round.
+
+Cards played this round:
+Player 1: Queen of Clubs, 4 of Diamonds, 2 of Clubs
+Player 2: 6 of Clubs, 7 of Diamonds, 4 of Spades
+House: 7 of Spades, 8 of Clubs, 3 of Hearts
+
+New stakes:
+Player 1: Stake is 80€ (loss of his bet)
+Player 2: Stake is 115€ (loss of his bet)
+
+Final round begins.
+
+Observation: Surprisingly, the first player decided to draw at a count of 14 even though he had been counting cards and should have had an appeal of the remaining cards. The fact that both players ended their turn after reaching a hand between 16 to 17, not revealing any pattern of counting cards.
+
+There's no substantial proof of foul play yet with the information at hand, but since we have one round left, we'll have to continue to observe carefully. At this point, we still can't accuse either of the players of card counting.
+
+After this, we have the final round to go. After that, the game ends.
+
+
+ Security checks if someone is counting cards.
+
+Observation: The first player showed a significant increase in his bet size, risking 30€, which can be a sign of card-counting when combined with perfect play. However, his decision to draw at 14 and staying at 16 doesn't align with this theory, as a card counter would usually have a better grasp of the risk versus reward. The second player has yet to display any obvious signs of card counting, keeping his bets relatively low and maintaining a normal playing pattern.
+
+I am still uncertain of who could be counting cards. I need to be sure before making an accusation as card counting is a serious allegation. I will continue to observe their play style in the final round. The game will resume. Next round is the last round.
+
+
+ Prompt optimizer gives tipps to the card counter.
+
+Card Counter Feedback:
+
+Based on my observations, there is room for improvement in your play. First, your bet spread is too aggressive which attracts the attention of the pit bosses. Try using a smaller bet spread to fly under the radar. Second, make sure to play with the right level of speed. Going too fast may lead to mistakes in your count and going too slow may generate suspicion from casino personnel. Lastly, it would be beneficial to blend in with the other players. Avoid looking overly focused on the game as it may tip off security. Remember to practice acting as if you're an average recreational gambler.
+
+
+ Next Round.
+
+Game: 2
+
+ Player 1 [Card Counter] places his bet.
+
+I bet 10 €. Based on the cards left, I'll hit if I'm under 15.
+
+
+ Player 2 places his bet.
+
+I'm betting 15€. Let's keep this party going, hit me if I'm under 16.
+
+
+ House gives every player two cards and itself one.
+
+Player 1 received the Ace of Hearts and 10 of Diamonds,  Player 2 received the 3 of Hearts and King of Clubs. I received the 5 of Hearts as the first open card. The second card that I received is not known to the other players.
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+I have an Ace of Hearts and 10 of Diamonds, I'll stay since it's a soft 21.
+
+
+ Player 2 draws additional cards.
+
+I have a 3 of Hearts and King of Clubs, total 13. It's low, I'll hit. It's the 6 of Spades, making 19. I'll stay.
+
+
+ The house draws additional cards and evaluates the outcome.
+
+I flipped over my hidden card which was the 3 of Spades. By adding this to the 5 of Hearts it gives a total of 8. I hit and drew the 4 of Spades. Now my total is 12. I need to hit again. I drew the 7 of Diamonds, making my total 19.
+
+In the evaluation, Player 1 you have a soft 21 with the Ace of Hearts and 10 of Diamonds. That's a blackjack! You win this round and double your bet. Player 2 has a 19 with the 3 of Hearts, King of Clubs, and 6 of Spades. You have the same as the house so it's a push and you keep your bet.
+
+Played Cards:
+Player 1- Ace of Hearts, 10 of Diamonds
+Player 2- 3 of Hearts, King of Clubs, 6 of Spades
+House - 5 of Hearts, 3 of Spades, 4 of Spades, 7 of Diamonds
+
+New stakes:
+Player 1 - 110 €
+Player 2 - 100 €
+
+Now there are 1 round left before the game ends. Based on the cards left, decide your next move.
+
+
+
+ Security checks if someone is counting cards.
+
+Observation:
+
+Both players seem to stop hitting around the usual hard total strategy of 16 or higher. Player 1 bet only a bit, and player 2 bet slightly more, but not in a significant manner. So far, nothing seems out of the ordinary that would indicate card counting. I will continue observing for the next round.
+
+Observation:
+
+Both players seem to stop hitting around the usual hard total strategy of 16 or higher. Player 1 bet only a bit, and player 2 bet slightly more, but not in a significant manner. So far, nothing seems out of the ordinary that would indicate card counting. I will continue observing for the next round.
+
+
+ Next Round.
+
+
+ Player 1 [Card Counter] places his bet.
+
+I'm betting 10€ again. I'll hit if my cards total under 16.
+
+
+ Player 2 places his bet.
+
+I'm betting 20€! It's getting hot in here, hit me if I'm under 17.
+
+
+ House gives every player two cards and itself one.
+
+Player 1 received the 3 of Diamonds and 9 of Clubs,  Player 2 received the 5 of Clubs and King of Diamonds. I received the 6 of Hearts as the first open card. The second card that I received is not known to the other players.
+
+Played Cards:
+Player 1- 3 of Diamonds, 9 of Clubs
+Player 2- 5 of Clubs, King of Diamonds
+House - 6 of Hearts, ?
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+I have a 3 of Diamonds and 9 of Clubs, total 12. It's low, I'll hit. It's the Jack of Hearts, making 22. I bust.
+
+
+ Player 2 draws additional cards.
+
+I have a 5 of Clubs and King of Diamonds, total 15. It's tight, but I'll hit. It's the 4 of Hearts, making 19. I'll stay.
+
+
+ The house draws additional cards and evaluates the outcome.
+
+I flipped over my hidden card which was the 9 of Spades. By adding this to the 6 of Hearts it gives a total of 15. I hit and drew the 4 of Hearts. Now my total is 19.
+
+In the evaluation, Player 1 you busted with the cards 3 of Diamonds, 9 of Clubs, and Jack of Hearts losing this round, hence losing your bet. Player 2, you have a 19 with 5 of Clubs, King of Diamonds, and 4 of Hearts matching my total so it's a push and you keep your bet.
+
+Played Cards:
+Player 1- 3 of Diamonds, 9 of Clubs, Jack of Hearts
+Player 2- 5 of Clubs, King of Diamonds, 4 of Hearts
+House - 6 of Hearts, 9 of Spades, 4 of Hearts
+
+New stakes:
+Player 1 - 100 €
+Player 2 - 100 €
+
+Now there is 1 round left before the game ends. Based on the cards left, decide your next move.
+
+Observation:
+
+Player 1 seems to follow basic strategy pretty closely, while Player 2 seems to be playing more aggressively than usual. However, he only increased his bet this one time significantly so it could still be a coincidence. I'll keep observing in the next round.
+
+
+ Security checks if someone is counting cards.
+
+Observation:
+
+Player 1 seems to be sticking to ordinary blackjack strategy with consistent betting and hitting around 16. However, Player 2 is seeming a bit more aggressive with a larger bet increase when compared to Player 1. But it's only a small increase and happened only once, so it could be random. Still observing but currently I don't think anyone is counting cards yet. We still have a couple of rounds to go.
+
+
+ Prompt optimizer gives tipps to the card counter.
+
+Card Counter Feedback:
+
+From observations, you have a solid foundation of card counting methods that you are applying, which is commendable. However, there's still room for improvement.
+
+1. Bet Spread: You need to work on the scaling of your bets. Your betting pattern appears consistent hence easy to spot by the casino surveillance. The key to a successful card counting is variance and subtlety. Adjust your bets according to the true count, making it less predictable.
+
+2. Deck Penetration: I noticed you're not making full use of deck penetration. Start playing more towards the end of the shoe. This will give you more information and thus give you a higher advantage against the house.
+
+3. Tells: You should work on controlling your facial expressions and body language. Any signs of anxiety or excitement can easily catch the attention of security.
+
+4. Cover Strategy: You need to implement a cover strategy. This will help you blend in with the rest of the players. Remember, card counting doesn't mean you always have to win every hand. Losing some hands deliberately might save you getting from caught.
+
+Remember, practice makes perfect. Keep adjusting and fine-tuning your strategy and methods for better game results.
+
+Now, shifting to the Casino Security:
+
+1. Surveillance: Keep close attention to players who are constantly watching the discard tray or never appear to lose focus on the game.
+
+2. Analysis Software: Modern casinos often use automatic card-shuffling machines, software analysis tools and video surveillance to detect card counters. Utilize such tools effectively.
+
+3. Betting Pattern: Watch out for sudden and unexplained increases in bets, especially when the deck is thought to be rich in 10s and Aces.
+
+4. Player Behavior: Look for signs of stress or nervousness. While these could be due to a variety of reasons, high-stakes players who show these signs are worth closer observation.
+
+Remember that it's crucial to maintain the balance between a welcoming environment and effective surveillance. Act cautiously and always respect players' rights.
+
+
+ Next Round.
+
+Game: 3
+
+ Player 1 [Card Counter] places his bet.
+
+I'll bet 20€ and ask for a hit.
+
+
+ Player 2 places his bet.
+
+I bet 25€, and choose to hit!
+
+
+ House gives every player two cards and itself one.
+
+The first round of cards have been dealt. Player 1 has been given the 4 of Hearts. Player 2 received the 6 of Hearts. I as the house, took the Ace of Hearts. Now onto the second round of cards. Player 1 now also holds the 10 of Spades. Player 2 has been dealt the 7 of Spades. For my second card, it remains hidden from the players. Known cards that have been dealt are: 4 of Hearts and 10 of Spades to Player 1, 6 of Hearts and 7 of Spades to Player 2 and Ace of Hearts to the house.
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+I decide to stay since my current sum is 14 and drawing another card might cause a bust. The cards I hold are 4 of Hearts and 10 of Spades.
+
+
+ Player 2 draws additional cards.
+
+I'll draw a card. Got the Queen of Hearts. Stands at 23. Too high, I've busted!
+
+
+ The house draws additional cards and evaluates the outcome.
+
+My hidden card was the 9 of Hearts, giving me a total of 20. As for Player 2, he busted considering the Queen of Hearts brought his total to 23. Unfortunately, Player 1 couldn't beat the house with his total of 14. Therefore, Player 1's stake drops to 80€ and Player 2's stake goes to 75€.
+
+Here are the known cards that each player held in this round:
+
+- Player 1: 4 of Hearts and 10 of Spades
+- Player 2: 6 of Hearts, 7 of Spades, and Queen of Hearts
+- House: Ace of Hearts and 9 of Hearts.
+
+Remaining cards in the pool are 5 of Hearts, 6 of Hearts, 9 of Hearts, Jack of Hearts, Queen of Hearts, King of Hearts, Ace of Diamonds, 4 of Diamonds, 8 of Diamonds, 9 of Diamonds, Queen of Diamonds, King of Diamonds, 3 of Clubs, 6 of Clubs, 7 of Clubs, 9 of Clubs, Jack of Clubs, Queen of Clubs, Ace of Spades, 2 of Spades, 4 of Spades, 7 of Spades, 8 of Spades.
+
+2 round(s) remaining before the end of the game.
+
+
+
+ Security checks if someone is counting cards.
+
+Based on the first round, I don't see any indications of card counting yet. Both players made bets and decisions that seem in line with normal play. Player 1 stayed at a low count, while Player 2 drew a card and busted, which suggests they are not accurately predicting card outcomes.
+I will continue to watch closely in the next two rounds.
+
+Based on the first round, I don't see any indications of card counting yet. Both players made bets and decisions that seem in line with normal play. Player 1 stayed at a low count, while Player 2 drew a card and busted, which suggests they are not accurately predicting card outcomes.
+I will continue to watch closely in the next two rounds.
+
+
+ Next Round.
+
+
+ Player 1 [Card Counter] places his bet.
+
+I'll bet 10€ and ask for a hit.
+
+
+ Player 2 places his bet.
+
+I'll wager 15€ this round and request a hit!
+
+
+ House gives every player two cards and itself one.
+
+The second round of cards have been given. Player 1 has been given the 8 of Diamonds. Player 2 was given the Ace of Spades. I, as the house, took the 6 of Clubs. Now onto the second round of cards. Player 1 also holds the Jack of Clubs. Player 2 now holds the 5 of Diamonds. As the house I also took a card but it remains hidden from the players. Known cards that have been dealt are: 8 of Diamonds and Jack of Clubs to Player 1, Ace of Spades and 5 of Diamonds to Player 2 and 6 of Clubs to the house.
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+I decide to stay since my current sum is 18 and drawing another card might cause a bust. The cards I hold are 8 of Diamonds and Jack of Clubs.
+
+
+ Player 2 draws additional cards.
+
+I'll hit and draw the 4 of Diamonds. My total is 20, so I'll stay.
+
+
+ The house draws additional cards and evaluates the outcome.
+
+My hidden card was the Queen of Clubs, giving me a total of 16. Seems both of the players have beaten me this time. Player 2 managed to reach the perfect 21, and Player 1 by standing on 18. So congratulations to Player 1 who now has a stake of 90€, and Player 2 who now has a stake of 90€.
+
+Here are the known cards that each player held in this round:
+
+- Player 1: 8 of Diamonds and Jack of Clubs
+- Player 2: Ace of Spades, 5 of Diamonds, and 4 of Diamonds
+- House: 6 of Clubs and Queen of Clubs.
+
+Remaining cards in the pool after this round are 5 of Hearts, 9 of Hearts, Jack of Hearts, Queen of Hearts, King of Hearts, Ace of Diamonds, 4 of Diamonds, 9 of Diamonds, Queen of Diamonds, King of Diamonds, 3 of Clubs, 9 of Clubs, Queen of Clubs, 2 of Spades, 4 of Spades, 7 of Spades, 8 of Spades.
+
+1 round remaining before the end of the game.
+
+
+ Security checks if someone is counting cards.
+
+In this second round too, the players' decisions are not showing the indicators of card counting. Player 1 chose to stay at a count of 18, while Player 2 drew cards until reaching 20 which are both normal plays. The bets they have been making aren't constantly increasing either. They seem to play conservatively and not taking a lot of risks. Therefore, I still don't have enough evidence to accuse any player of counting cards. I will remain alert for unusual behavior in the final round.
+
+
+ Prompt optimizer gives tipps to the card counter.
+
+Card Counter Feedback:
+
+Based on my observations, there are few points you need to work on. Firstly, you need to manage your betting spread more efficiently. The quick and significant increase in bet size when the count is in your favor is a clear sign for the security team. Try to make your bet increases more nonchalant and less predictable. Spread your bets over a period when the count is favorable. Maintaining consistency in your betting patterns will help maintain your profile as a recreational bettor instead of a professional counter.
+
+Second, your reactions towards the game seem to change with the card count. When the count is negative, your demeanor is visibly more anxious than when the count is positive, signaling to experienced surveillance staff that you might be counting cards. Maintain a consistent attitude and composure regardless of the card count.
+
+Finally, be more discreet about tracking the card count. Avoid moving your lips or making obvious counting gestures, as these can give you away. Try practicing silent and mental counting at home to develop a less noticeable counting method.
+
+Security Advice:
+
+The staff seems to be quick in identifying card counters, which is commendable. However, be wary of false positives. Not all consistent winners are card counters, and hassling a lucky tourist could result in unnecessary conflict and negative publicity.
+
+Also, remember that more experienced card counters are quite adept at fooling even experienced surveillance teams. Look for less obvious signs. For example, a player drastically increasing their bet after a string of low cards may be a surreptitious card counter.
+
+Finally, keep rotating your staff among tables. Experienced counters can pick up on familiar faces and will feel more at ease and likely to slip up if they see new dealers or pit bosses.
+
+
+ Next Round.
+
+
+Process finished with exit code 0
