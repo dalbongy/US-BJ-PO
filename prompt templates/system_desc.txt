@@ -18,8 +18,6 @@ Amount of Players: <Players>
 
 Deck of Cards: <Decks>
 
-Left cards in the deck: <Cards>
-
 Stake: <Stake>
 
 There are at most <Num_Rounds> rounds of messages between the house and the players. When players are still playing, they leave

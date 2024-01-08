@@ -28,7 +28,6 @@ f = open('prompt templates/system_desc.txt', "r")
 system_prompt = f.read()
 system_prompt = system_prompt.replace("<Players>", players)
 system_prompt = system_prompt.replace("<Decks>", deck_of_cards)
-system_prompt = system_prompt.replace("<Cards>", ', '.join(deck))
 system_prompt = system_prompt.replace("<Stake>", stake)
 system_prompt = system_prompt.replace("<Num_Rounds>", str(num_rounds))
 
@@ -90,7 +89,19 @@ while game <= num_games:
         deck.pop(random.randint(0, len(deck) - 1))
         i += 1
 
-    # Hier muss das <cards> nachträglich verändert werden
+    card_counter_prompt = card_counter_prompt + ('\n New Round! \n'
+                                                 'The following Cards are left in the deck:'
+                                                 ', '.join(deck))
+    house_prompt = house_prompt + ('\n New Round! \n'
+                                   'The following Cards are left in the deck:'
+                                   ', '.join(deck))
+    player_prompt = player_prompt + ('\n New Round! \n'
+                                     'The following Cards are left in the deck:'
+                                     ', '.join(deck))
+    security_prompt = security_prompt + ('\n New Round! \n'
+                                         'The following Cards are left in the deck:'
+                                         ', '.join(deck))
+
     while round <= num_rounds:
         print("\n Player 1 [Card Counter] places his bet. \n")
         res = client.chat.completions.create(
