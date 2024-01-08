@@ -28,7 +28,6 @@ f = open('prompt templates/system_desc.txt', "r")
 system_prompt = f.read()
 system_prompt = system_prompt.replace("<Players>", players)
 system_prompt = system_prompt.replace("<Decks>", deck_of_cards)
-system_prompt = system_prompt.replace("<Cards>", ', '.join(deck))
 system_prompt = system_prompt.replace("<Stake>", stake)
 system_prompt = system_prompt.replace("<Num_Rounds>", str(num_rounds))
 
@@ -90,20 +89,44 @@ while game <= num_games:
         deck.pop(random.randint(0, len(deck) - 1))
         i += 1
 
-    # Hier muss das <cards> nachträglich verändert werden
+    card_counter_prompt = card_counter_prompt + ('\n New Round! \n'
+                                                 'The following Cards are left in the deck:'
+                                                 ', '.join(deck))
+    house_prompt = house_prompt + ('\n New Round! \n'
+                                   'The following Cards are left in the deck:'
+                                   ', '.join(deck))
+    player_prompt = player_prompt + ('\n New Round! \n'
+                                     'The following Cards are left in the deck:'
+                                     ', '.join(deck))
+    security_prompt = security_prompt + ('\n New Round! \n'
+                                         'The following Cards are left in the deck:'
+                                         ', '.join(deck))
+
     while round <= num_rounds:
         print("\n Player 1 [Card Counter] places his bet. \n")
+
+        message = [
+            {"role": "user",
+             "content": card_counter_prompt + '\n You are Player 1 at the table.'
+                                              'Bet your stake and play to your persona.'
+                                              'Give us your thought process but try to keep it short.'
+                                              'Tell me the running count. In a format as the following example: "running count: /n +1 /n"'
+                                              'You know which cards are still in the game.'
+                                              'If you received feedback by the card counter optimizer, then implement it into your strategy.'
+                                              'Only generate the next answer.'
+                                              'Rounds to go before the game ends: ' + str(num_rounds)
+             },
+        ]
+
+        if total_tokens_burned + num_tokens_from_messages(message) >= 10000:
+            print("Too many tokens. Going to sleep!\n")
+            time.sleep(60)
+            total_tokens_burned = num_tokens_from_messages(message)
+        else:
+            total_tokens_burned += num_tokens_from_messages(message)
+
         res = client.chat.completions.create(
-            messages=[
-                {"role": "user",
-                 "content": card_counter_prompt + '\n You are Player 1 at the table.'
-                                                  'Bet your stake and play to your persona.'
-                                                  'You know which cards are still in the game.'
-                                                  'If you received feedback by the card counter optimizer, then implement it into your strategy.'
-                                                  'Only generate the next answer.'
-                                                  'Rounds to go before the game ends: ' + str(num_rounds)
-                 },
-            ],
+            messages=message,
             model=gpt_model,
 
         )
@@ -116,16 +139,26 @@ while game <= num_games:
         print(res.choices[0].message.content + '\n')
 
         print("\n Player 2 places his bet. \n")
-        res = client.chat.completions.create(
-            messages=[
-                {"role": "user",
-                 "content": player_prompt + '\n You are Player 2 at the table.'
-                                            'Bet your stake and play to your persona.'
-                                            'Only generate the next answer.'
-                                            'Rounds to go before the game ends: ' + str(num_rounds)
-                 },
 
-            ],
+        message = [
+            {"role": "user",
+             "content": player_prompt + '\n You are Player 2 at the table.'
+                                        'Bet your stake and play to your persona.'
+                                        'Only generate the next answer.'
+                                        'Rounds to go before the game ends: ' + str(num_rounds)
+             },
+
+        ]
+
+        if total_tokens_burned + num_tokens_from_messages(message) >= 10000:
+            print("Too many tokens. Going to sleep!")
+            time.sleep(60)
+            total_tokens_burned = num_tokens_from_messages(message)
+        else:
+            total_tokens_burned += num_tokens_from_messages(message)
+
+        res = client.chat.completions.create(
+            messages=message,
             model=gpt_model,
         )
 
@@ -139,18 +172,28 @@ while game <= num_games:
         # Bank teilt jedem eine Karte aus und deckt seine erste Karte auf
         # Bank teilt jedem seine 2. Karte aus und zieht seine 2. Karte verdeckt
         print("\n House gives every player two cards and itself one. \n")
+
+        message = [
+            {"role": "user",
+             "content": house_prompt + '\n Give every player at the table a card including yourself. '
+                                       'The cards are known to every player. '
+                                       'Afterwards give every player a second card and give yourself a card that is '
+                                       'unknown to the other players.'
+                                       'Tell me every known card that has been given out to which player.'
+                                       'Only generate the next answer.'
+                                       'Rounds to go before the game ends: ' + str(num_rounds)
+             },
+        ]
+
+        if total_tokens_burned + num_tokens_from_messages(message) >= 10000:
+            print("Too many tokens. Going to sleep!")
+            time.sleep(60)
+            total_tokens_burned = num_tokens_from_messages(message)
+        else:
+            total_tokens_burned += num_tokens_from_messages(message)
+
         res = client.chat.completions.create(
-            messages=[
-                {"role": "user",
-                 "content": house_prompt + '\n Give every player at the table a card including yourself. '
-                                           'The cards are known to every player. '
-                                           'Afterwards give every player a second card and give yourself a card that is '
-                                           'unknown to the other players.'
-                                           'Tell me every known card that has been given out to which player.'
-                                           'Only generate the next answer.'
-                                           'Rounds to go before the game ends: ' + str(num_rounds)
-                 },
-            ],
+            messages=message,
             model=gpt_model,
 
         )
@@ -186,28 +229,39 @@ while game <= num_games:
         )
         """
         print("\n Player 1 [Card Counter] draws additional cards. \n")
-        res = client.chat.completions.create(
-            messages=[
-                {"role": "user",
-                 "content": card_counter_prompt + '\n You are Player 1 at the table '
-                                                  'play to your persona'
-                                                  'decide if you want to draw a card according to your strategy'
-                                                  'you can draw as many cards as you want'
-                                                  'draw them yourself and don\'t wait for the house'
-                                                  'Tell me every known card that you have drawn or flipped.'
-                                                  'If you draw an Ace you can decide whether it is a 1 or an 11.'
-                                                  'If you received feedback by the card counter optimizer, then implement it into your strategy.'
-                                                  'Here is an example: Your previous two cards were a 2 of Hearts and a 3 of Hearts. You decide to draw another card which is a 6 of Clubs. This is still low so you draw another card which is a 10. You don\'t want to draw another time and finish your turn.'
-                                                  'Here is another example: Your previous two cards were a 7 of Hearts and an 8 of Spades. You decide to draw another card which is a 5 of Clubs. You don\'t want to risk it and decidde to not draw another card.'
-                                                  'Here is another example: Your previous cards are a 10 of Hearts and a 9 of Clubs. You decide not to draw another card and finish your turn.'
-                                                  'Only generate the next answer.'
-                                                  'Rounds to go before the game ends: ' + str(num_rounds)
 
-                 # Ein Beispiel einbinden
-                 # Vielleicht draw additional cards statt hit
-                 # Generell expliziter machen
-                 },
-            ],
+        message = [
+            {"role": "user",
+             "content": card_counter_prompt + '\n You are Player 1 at the table.'
+                                              'Play to your persona.'
+                                              'Give us your thought process but try to keep it short.'
+                                              'Decide if you want to draw a card according to your strategy.'
+                                              'You can draw as many cards as you want.'
+                                              'Draw them yourself and don\'t wait for the house.'
+                                              'Tell me every known card that you have drawn or flipped.'
+                                              'If you draw an Ace you can decide whether it is a 1 or an 11.'
+                                              'If you received feedback by the card counter optimizer, then implement it into your strategy.'
+                                              'Here is an example: Your previous two cards were a 2 of Hearts and a 3 of Hearts. You decide to draw another card which is a 6 of Clubs. This is still low so you draw another card which is a 10. You don\'t want to draw another time and finish your turn.'
+                                              'Here is another example: Your previous two cards were a 7 of Hearts and an 8 of Spades. You decide to draw another card which is a 5 of Clubs. You don\'t want to risk it and decidde to not draw another card.'
+                                              'Here is another example: Your previous cards are a 10 of Hearts and a 9 of Clubs. You decide not to draw another card and finish your turn.'
+                                              'Only generate the next answer.'
+                                              'Rounds to go before the game ends: ' + str(num_rounds)
+
+             # Ein Beispiel einbinden
+             # Vielleicht draw additional cards statt hit
+             # Generell expliziter machen
+             },
+        ]
+
+        if total_tokens_burned + num_tokens_from_messages(message) >= 10000:
+            print("Too many tokens. Going to sleep!")
+            time.sleep(60)
+            total_tokens_burned = num_tokens_from_messages(message)
+        else:
+            total_tokens_burned += num_tokens_from_messages(message)
+
+        res = client.chat.completions.create(
+            messages=message,
             model=gpt_model,
 
         )
@@ -241,27 +295,38 @@ while game <= num_games:
 
         )
         """
-        res = client.chat.completions.create(
-            messages=[
-                {"role": "user",
-                 "content": player_prompt + '\n You are Player 2 at the table.'
-                                            'Play to your persona.'
-                                            'Decide if you want to draw a card according to your strategy.'
-                                            'You can draw as many cards as you want.'
-                                            'Draw them yourself and don\'t wait for the house.'
-                                            'Tell me every known card that you have drawn or flipped.'
-                                            'If you draw an Ace you can decide whether it is a 1 or an 11.'
-                                            'Here is an example: Your previous two cards were a 2 of Hearts and a 3 of Hearts. You decide to draw another card which is a 6 of Clubs. This is still low so you draw another card which is a 10. You don\'t want to draw another time and finish your turn.'
-                                            'Here is another example: Your previous two cards were a 7 of Hearts and an 8 of Spades. You decide to draw another card which is a 5 of Clubs. You don\'t want to risk it and decidde to not draw another card.'
-                                            'Here is another example: Your previous cards are a 10 of Hearts and a 9 of Clubs. You decide not to draw another card and finish your turn.'
-                                            'Only generate the next answer.'
-                                            'Rounds to go before the game ends: ' + str(num_rounds)
-                 },
 
-            ],
+        message = [
+            {"role": "user",
+             "content": player_prompt + '\n You are Player 2 at the table.'
+                                        'Play to your persona.'
+                                        'Decide if you want to draw a card according to your strategy.'
+                                        'You can draw as many cards as you want.'
+                                        'Draw them yourself and don\'t wait for the house.'
+                                        'Tell me every known card that you have drawn or flipped.'
+                                        'If you draw an Ace you can decide whether it is a 1 or an 11.'
+                                        'Here is an example: Your previous two cards were a 2 of Hearts and a 3 of Hearts. You decide to draw another card which is a 6 of Clubs. This is still low so you draw another card which is a 10. You don\'t want to draw another time and finish your turn.'
+                                        'Here is another example: Your previous two cards were a 7 of Hearts and an 8 of Spades. You decide to draw another card which is a 5 of Clubs. You don\'t want to risk it and decidde to not draw another card.'
+                                        'Here is another example: Your previous cards are a 10 of Hearts and a 9 of Clubs. You decide not to draw another card and finish your turn.'
+                                        'Only generate the next answer.'
+                                        'Rounds to go before the game ends: ' + str(num_rounds)
+             },
+
+        ]
+
+        if total_tokens_burned + num_tokens_from_messages(message) >= 10000:
+            print("Too many tokens. Going to sleep!")
+            time.sleep(60)
+            total_tokens_burned = num_tokens_from_messages(message)
+        else:
+            total_tokens_burned += num_tokens_from_messages(message)
+
+        res = client.chat.completions.create(
+            messages=message,
             model=gpt_model,
 
         )
+
         card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
         house_prompt = house_prompt + '\n\n' + res.choices[0].message.content
         player_prompt = player_prompt + '\n\n' + res.choices[0].message.content
@@ -272,24 +337,34 @@ while game <= num_games:
         # Bank deckt so lange auf bis Blackjack Regel bedient ist.
         # Gewinn wird ausgewertet
         print("\n The house draws additional cards and evaluates the outcome. \n")
+
+        message = [
+            {"role": "user",
+             "content": house_prompt +
+                        'Reveal your hidden card if every player decides to stay with their hand.'
+                        'Draw additional cards according to the blackjack rulebook as the house. '
+                        'Tell me every known card that you have drawn or flipped.'
+                        'Evaluate which players have won and which haven\'t according to the blackjack rulebook.'
+                        'If you have busted then all players which stayed below 21 won automatically'
+                        'If a players has an ace, '
+                        'the value of the ace is that what makes the hand nearest to 21.'
+                        'Change their stakes accordingly.'
+                        'Please give me a table of all the played cards of each player and the sum their hand'
+                        'Please give me an overview of the new stakes of each player.'
+                        'Don\'t give us an evaluation of the players\' behaviour.'
+                        'Only generate the next answer.'
+             },
+        ]
+
+        if total_tokens_burned + num_tokens_from_messages(message) >= 10000:
+            print("Too many tokens. Going to sleep!")
+            time.sleep(60)
+            total_tokens_burned = num_tokens_from_messages(message)
+        else:
+            total_tokens_burned += num_tokens_from_messages(message)
+
         res = client.chat.completions.create(
-            messages=[
-                {"role": "user",
-                 "content": house_prompt +
-                            'Reveal your hidden card if every player decides to stay with their hand.'
-                            'Draw additional cards according to the blackjack rulebook as the house. '
-                            'Tell me every known card that you have drawn or flipped.'
-                            'Evaluate which players have won and which haven\'t. '
-                            'If you have busted then all players which stayed below 21 won automatically'
-                            'If a players has an ace, '
-                            'the value of the ace is that what makes the hand nearest to 21.'
-                            'Change their stakes accordingly.'
-                            'Please give me a table of all the played cards of each player.'
-                            'Please give me an overview of the new stakes of each player.'
-                            'Don\'t give us an evaluation of the players\' behaviour.'
-                            'Only generate the next answer.'
-                 },
-            ],
+            messages=message,
             model=gpt_model,
 
         )
@@ -304,17 +379,27 @@ while game <= num_games:
         # Habs auskommentiert um Tokens zu sparen
         # Security beobachtet das Spiel, prüft, ob er den Card Counter ausfindig machen kann
         print("\n Security checks if someone is counting cards. \n")
+
+        message = [
+            {"role": "user",
+             "content": security_prompt +
+                        'Your job is to catch the card counter.'
+                        'Only give an observation based on what you read'
+                        'If you are sure that someone is counting cards, then tell me who it is.'  # Eventuell an dieser Stelle eine Methode einführen, welche den Wert "im Spiel" ändert
+                        'If you think, that nobody is counting cards then end your turn.'
+                        'Only generate the next answer.'
+             },
+        ]
+
+        if total_tokens_burned + num_tokens_from_messages(message) >= 10000:
+            print("Too many tokens. Going to sleep!")
+            time.sleep(60)
+            total_tokens_burned = num_tokens_from_messages(message)
+        else:
+            total_tokens_burned += num_tokens_from_messages(message)
+
         res = client.chat.completions.create(
-            messages=[
-                {"role": "user",
-                 "content": security_prompt +
-                            'Your job is to catch the card counter.'
-                            'Only give an observation based on what you read'
-                            'If you are sure that someone is counting cards, then tell me who it is.'  # Eventuell an dieser Stelle eine Methode einführen, welche den Wert "im Spiel" ändert
-                            'If you think, that nobody is counting cards then end your turn.'
-                            'Only generate the next answer.'
-                 },
-            ],
+            messages=message,
             model=gpt_model,
 
         )
@@ -329,6 +414,27 @@ while game <= num_games:
         # Hier den Promptopimizer machen
         if round == 2:
             print("\n Prompt optimizer gives tipps to the card counter. \n")
+
+            message = [
+                {"role": "user",
+                 "content": 'You know every method of card counting.'
+                            'You only give advice when the card counter is busted by the security or the game ends for him'
+                            'Give the advice for the card counter and the security separately'
+                            'You look over the game and watch every action and observe every move the card counter makes.'
+                            'Give the Card Counter Feedback on what to improve on with his game.'
+                            'It can be everything for example his bets or general strategy'
+                            'Only generate the next answer.'
+                            'Rounds to go before the game ends: ' + str(num_rounds)
+                 },
+            ]
+
+            if total_tokens_burned + num_tokens_from_messages(message) >= 10000:
+                print("Too many tokens. Going to sleep!")
+                time.sleep(60)
+                total_tokens_burned = num_tokens_from_messages(message)
+            else:
+                total_tokens_burned += num_tokens_from_messages(message)
+
             res = client.chat.completions.create(
                 messages=[
                     {"role": "user",

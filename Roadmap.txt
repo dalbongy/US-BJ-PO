@@ -3,8 +3,13 @@
 3. Mehr Runden check
 4. Manueller Shuffel mit anschließendem .pop() check
 5. Nach jeder Runde warten um Tokens zu refreshen check
-6. Eventuell sagen, dass Agents jede Entscheidung kurz begründen sollen.
-Neuer Eintrag: Jedes neue Spiel soll ein neues Deck of Cards erhalten
+6. Eventuell sagen, dass Agents jede Entscheidung kurz begründen sollen. check
+7. Jedes neue Spiel soll ein neues Deck of Cards erhalten check
+8. Step-back prompting check
+9. Card Counter nennt seine Odds check
+10. Prompt anpassen sodass Card Counter den running Count immer gleich ausgibt
+11. Programmieren, dass der, vom Card Counter berechnete, Running Count, der tatsächliche Running Count und die Wette vom Card Counter dargestellt werden.
 
-7. Eine Runde mit positiven Deck starten, eine Runde mit negativem Deck starten
-8. Vorab 10 Runden ohne Output simulieren lassen und dann eine "richtige" Runde spielen um zu gucken was passiert.
+Testing:
+1. Eine Runde mit positivem Deck starten, eine Runde mit negativem Deck starten
+2. Vorab 10 Runden ohne Output simulieren lassen und dann eine "richtige" Runde spielen um zu gucken was passiert.
