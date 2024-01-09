@@ -3,6 +3,25 @@ import time
 import random
 from openai import OpenAI
 from dotenv import load_dotenv
+import tiktoken
+
+
+def num_tokens_from_messages(messages):
+    """Return the number of tokens used by a list of messages."""
+    encoding = tiktoken.encoding_for_model("gpt-4")
+    tokens_per_message = 3
+    tokens_per_name = 1
+
+    num_tokens = 0
+    for message in messages:
+        num_tokens += tokens_per_message
+        for key, value in message.items():
+            num_tokens += len(encoding.encode(value))
+            if key == "name":
+                num_tokens += tokens_per_name
+    num_tokens += 3  # every reply is primed with <|start|>assistant<|message|>
+    return num_tokens
+
 
 load_dotenv()
 
@@ -10,6 +29,8 @@ client = OpenAI(
     # defaults to os.environ.get("OPENAI_API_KEY")
     api_key=os.getenv('OPEN_AI_KEY'),
 )
+
+total_tokens_burned = 0
 
 players = '2'
 
@@ -436,20 +457,8 @@ while game <= num_games:
                 total_tokens_burned += num_tokens_from_messages(message)
 
             res = client.chat.completions.create(
-                messages=[
-                    {"role": "user",
-                     "content": 'You know every method of card counting.'
-                                'You only give advice when the card counter is busted by the security or the game ends for him'
-                                'Give the advice for the card counter and the security separately'
-                                'You look over the game and watch every action and observe every move the card counter makes.'
-                                'Give the Card Counter Feedback on what to improve on with his game.'
-                                'It can be everything for example his bets or general strategy'
-                                'Only generate the next answer.'
-                                'Rounds to go before the game ends: ' + str(num_rounds)
-                     },
-                ],
+                messages=message,
                 model=gpt_model,
-
             )
 
             card_counter_prompt = card_counter_prompt + '\n\n' + res.choices[0].message.content
@@ -462,5 +471,4 @@ while game <= num_games:
         print("\n Next Round. \n")
 
         round += 1
-        time.sleep(60)
     game += 1
