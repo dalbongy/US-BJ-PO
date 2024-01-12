@@ -1,0 +1,5 @@
+Token usage becomes too much .
+Token usage for GPT4 ist not enough build a complex system around it.
+Project becomes more expensive as we expand the project.
+Results are becoming worse as we define more rules.
+
