@@ -1,10 +1,5 @@
-1. Promptoptimizer check
-2. Mehr Spieler (optional)
-3. Mehr Runden check
-4. Manueller Shuffel mit anschließendem .pop() check
-5. Nach jeder Runde warten um Tokens zu refreshen check
-6. Eventuell sagen, dass Agents jede Entscheidung kurz begründen sollen.
-Neuer Eintrag: Jedes neue Spiel soll ein neues Deck of Cards erhalten
+1. Deck korrigieren, nachdem Karten gespielt wurden. check
+2. Die Analyse vor dem Promptoptimizer laufen lassen und diesem dann sagen, was der tatsächliche Count war. check
 
-7. Eine Runde mit positiven Deck starten, eine Runde mit negativem Deck starten
-8. Vorab 10 Runden ohne Output simulieren lassen und dann eine "richtige" Runde spielen um zu gucken was passiert.
+Testing:
+1. Ein Spiel mit einem positiven Deck, ein Spiel mit einem negativen Deck und die letzte Runde mit einem zufälligen Deck. check

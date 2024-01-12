@@ -1,0 +1,76 @@
+"C:\Users\Uni\5. Semester\5.3 Unternehmenssoftware\US-BJ-PO\venv\Scripts\python.exe" "C:\Users\Uni\5. Semester\5.3 Unternehmenssoftware\US-BJ-PO\main.py"
+Game: 1
+Round: 1
+
+ Player 1 [Card Counter] places his bet.
+
+I count more high value cards left, increasing my odds. I will make a higher bet. Running count: +5.
+
+
+ Player 2 places his bet.
+
+Let's keep the party going, I bet 25€. Aces high, right?
+
+
+ House gives every player two cards and itself one.
+
+The house draws the cards.
+Player 1 [Card Counter], here is your first card: 6 of Clubs
+Player 2, here is your first card: Ace of Clubs
+House, here is your first card: 9 of Clubs
+
+Player 1 [Card Counter], here is your second card: 8 of Hearts
+Player 2, here is your second card: 7 of Diamonds
+House, your second card is unknown to the players.
+
+So, the cards on the table are:
+Player 1 [Card Counter]: 6 of Clubs, 8 of Hearts
+Player 2: Ace of Clubs, 7 of Diamonds
+House: 9 of Clubs, one faced down card.
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+Looking at my hand, I have a sum of 14 (6 of Clubs, 8 of Hearts). It's not high enough to beat the house. I'll draw a card. I get Queen of Clubs. Now I stand with 24.
+
+
+ Player 2 draws additional cards.
+
+I have 18 (Ace of Clubs: 11, 7 of Diamonds: 7). That's pretty good, I'll stay. My hand is Ace of Clubs, 7 of Diamonds.
+
+
+ The house draws additional cards and evaluates the outcome.
+
+The house reveals the second card: Ace of Clubs. The house's total score is now 20 (9 of clubs and Ace of Clubs).
+
+According to the rulebook, the house doesn't need another card as the total is above 17. The score of the house is: 9 of Clubs, Ace of Clubs (total score is 20).
+
+Player's scores:
+Player 1 [Card Counter]: 6 of Clubs, 8 of Hearts, Queen of Clubs (24)
+Player 2: Ace of Clubs, 7 of Diamonds (18)
+
+Player 1's hand exceeds 21, which means he has busted.
+Player 2's hand is below 21 but it's also below the house's hand, which means he lost the round as well.
+Both players lose their bets.
+
+New Stakes:
+Player 1[Card Counter]: 75€
+Player 2: 75€
+
+
+ Security checks if someone is counting cards.
+
+Observation: In this round, Player 1 increased the bet stating more high value cards were left. He also mentioned a running count, which is a common card counting method. These signs indicate that Player 1 could be counting cards. I will keep a closer watch on Player 1 in coming rounds.
+
+
+ Next Round.
+
+Traceback (most recent call last):
+  File "C:\Users\Uni\5. Semester\5.3 Unternehmenssoftware\US-BJ-PO\main.py", line 541, in <module>
+    analyse_game(card_counter_prompt, game, round, deck)
+  File "C:\Users\Uni\5. Semester\5.3 Unternehmenssoftware\US-BJ-PO\main.py", line 32, in analyse_game
+    card_counter_count = message[message.index("Running Count:"): message.index("Running Count:") + 17].replace(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: substring not found
+
+Process finished with exit code 1

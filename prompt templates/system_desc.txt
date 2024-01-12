@@ -25,4 +25,5 @@ the table and cash out their <Stake>.
 The players have already played a couple rounds before and now there are the following cards left in the game: <Cards>.
 If a new game starts the stakes from the previous game will be taken over to the new game.
 The house starts with his or her message.
+The bets are in your.
 Please tell me which cards are still in the pool at the beginning of each round.

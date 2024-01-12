@@ -1,0 +1,478 @@
+Game: 1
+Round: 1
+
+ Player 1 [Card Counter] places his bet.
+
+I'll bet 10€. The odds are neutral at this point. Running count: 0.
+
+
+ Player 2 places his bet.
+
+I'll place my bet of 15€. Let's have fun!
+
+
+ House gives every player two cards and itself one.
+
+Player 1:  9 of Hearts.
+Player 2:  King of Clubs.
+The house:  9 of Diamonds.
+
+Second card round:
+Player 1:  Queen of Clubs.
+Player 2:  10 of Clubs.
+The house:  8 of Spades (hidden card).
+
+Cards left in the deck: Jack of Clubs, Jack of Hearts, Ace of Spades, Queen of Spades, 9 of Spades, Ace of Diamonds, King of Spades, 8 of Hearts, 8 of Diamonds, 8 of Clubs, Queen of Diamonds, Ace of Clubs, Jack of Diamonds, 9 of Clubs, King of Diamonds, King of Hearts, Queen of Hearts, 10 of Hearts, 10 of Spades, Jack of Spades, Ace of Hearts.
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+I have a 9 of Hearts and Queen of Clubs, that's 19. Drawing another card would be risky. I will stay. The running count is +1 (High card King appeared).
+
+
+ Player 2 draws additional cards.
+
+I hold King of Clubs and 10 of Clubs, giving me 20. Taking another card is unnecessary. My turn is over.
+
+
+ The house draws additional cards and evaluates the outcome.
+
+The house reveals the hidden card: 8 of Spades
+
+This gives the house a total of 17. The house's rule is to draw until 17 or more, so the house will stay at 17.
+
+Player 1's hand: 19 with the 9 of Hearts and Queen of Clubs
+Player 2's hand: 20 with the King of Clubs and 10 of Clubs
+
+Player 2 wins against the house with his higher hand.
+Player 1 also wins against the house with his higher hand.
+
+All the played cards this round are:
+Player 1: 9 of Hearts, Queen of Clubs (19 in total)
+Player 2: King of Clubs, 10 of Clubs (20 in total)
+The House: 9 of Diamonds, 8 of Spades (17 in total)
+
+Player 1 had bet 10 €, player 2 had bet 15 €. So, the new stakes are:
+Player 1: 110 €  (100 € + 10 € win)
+Player 2: 115 €  (100 € + 15 € win)
+
+That concludes this round. The remaining cards in the deck are now: Jack of Clubs, Jack of Hearts, Ace of Spades, Queen of Spades, 9 of Spades, Ace of Diamonds, King of Spades, 8 of Hearts, 8 of Diamonds, 8 of Clubs, Queen of Diamonds, Ace of Clubs, Jack of Diamonds, 9 of Clubs, King of Diamonds, King of Hearts, Queen of Hearts, 10 of Hearts, 10 of Spades, Jack of Spades, Ace of Hearts.
+
+
+ Security checks if someone is counting cards.
+
+Observation: Based on this round, I noticed a slight increase in Player 1's bet. However, the increase was minimal and could be attributed to normal play variance. As of now, I don't believe any of the players are counting cards. More rounds of play are necessary to make a proper determination. I will continue observing.
+
+
++------------------+-------------------+---------+
+|  His Card Count  | Actual Card Count | His Bet |
++------------------+-------------------+---------+
+| Running count: 0 |         20        |   10€   |
++------------------+-------------------+---------+
+
+
+ Next Round.
+
+Round: 2
+
+ Player 1 [Card Counter] places his bet.
+
+Too many tokens. Going to sleep!
+
+I'll bet 20€ based on the favorable count. Running count: +1.
+
+
+ Player 2 places his bet.
+
+I'll bet 30€. Hoping Lady Luck is with me this round.
+
+
+ House gives every player two cards and itself one.
+
+Player 1: Jack of Clubs.
+Player 2: Ace of Spades.
+The house: 9 of Spades.
+
+Second card round:
+Player 1: King of Spades.
+Player 2: 8 of Diamonds.
+The house: Queen of Diamonds (hidden card).
+
+Cards left in the deck: 8 of Hearts, 8 of Diamonds, 8 of Clubs, Ace of Clubs, Jack of Diamonds, 9 of Clubs, King of Diamonds, King of Hearts, Queen of Hearts, 10 of Hearts, 10 of Spades, Jack of Spades, Ace of Hearts.
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+I have a Jack of Clubs and King of Spades, that's 20. I won't risk drawing another card. I'll stay. The running count is +2 (High cards Jack and King appeared).
+
+
+ Player 2 draws additional cards.
+
+Too many tokens. Going to sleep!
+I got an Ace of Spades and 8 of Diamonds, making it 19. I'll stay, no need for more cards.
+
+
+ The house draws additional cards and evaluates the outcome.
+
+The house reveals the hidden card: Queen of Diamonds
+
+This gives the house a total of 19. According to the house's rule, no further draw is needed as the hand value is 17 or more.
+
+Player 1's hand: 20 with the Jack of Clubs and King of Spades
+Player 2's hand: 19 with the Ace of Spades and 8 of Diamonds
+
+Player 1 wins against the house with his higher hand.
+Player 2 pushes against the house with an equal hand, therefore his bet will be returned.
+
+All the played cards this round are:
+Player 1: Jack of Clubs, King of Spades (20 in total)
+Player 2: Ace of Spades, 8 of Diamonds (19 in total)
+The House: 9 of Spades, Queen of Diamonds (19 in total)
+
+Player 1 had bet 20 €, player 2 had bet 30 €. So, the new stakes are:
+Player 1: 130 €  (110 € + 20 € win)
+Player 2: 115 €  (115 € stake returned from the push)
+
+That concludes this round. The remaining cards in the deck are now: 8 of Hearts, 8 of Diamonds, 8 of Clubs, Ace of Clubs, Jack of Diamonds, 9 of Clubs, King of Diamonds, King of Hearts, Queen of Hearts, 10 of Hearts, 10 of Spades, Jack of Spades, Ace of Hearts.
+
+
+ Security checks if someone is counting cards.
+
+Observation: In this round, Player 1 doubled his bet from 10 € to 20 €, and his running count increased to +2. This is a potential sign of card counting, as increasing bets with a favorable count is a common strategy of card counters. Player 2 bet 30 €, which is double his initial bet from the previous round; However, there was no mention of counting or strategy implying card counting from his end, so his bet increase could well be normal play. I am suspecting Player 1 to be the card counter based on these observations. I need to observe more rounds to confirm my suspicion. I will continue observing.
+
+
++-------------------+-------------------+---------+
+|   His Card Count  | Actual Card Count | His Bet |
++-------------------+-------------------+---------+
+| Running count: +1 |         10        |   20€   |
++-------------------+-------------------+---------+
+
+
+ Prompt optimizer gives tipps to the card counter.
+
+Card Counter Feedback:
+
+From the data, your running count was +1 while the actual count was 10, indicating a significant discrepancy in your calculations. It's crucial to accurately track each card that is played. Your count should reflect the ratio of high to low-value cards left in the deck, and your discrepancy suggests you are either missing cards or miscalculating their values.
+
+Also, it seems like your betting strategy is not correlating with the running count. Remember the higher the count, the more you should bet. Adjust your bets in relationship to the count. Don't bet the highest amount when the count is low, and increase your bet when the count is high. Such variations in betting are less likely to alert casino security to your card counting.
+
+Besides, work on your general strategy to be less obvious. For instance, avoid staring at each card being dealt, moving your lips while counting, or displaying significant changes in behavior. These can all give you away as a card counter.
+
+Security's Advice,
+
+Security should pay more attention to players who significantly increase their bets. A sudden increased bet is often a clue that a player is card counting.
+
+Watch out for players observing the game without playing. Card counters often observe games before joining in so that they can get a feel for the deck.
+
+Also, there should be periodic disturbance in the game flow such as increased deck reshuffles, change of dealers, etc. This can disrupt the count and makes it harder for the counter to keep an accurate tally.
+
+Finally, learn to identify common signs of card counters, such as those who appear to keep a count using their fingers, muttering under their breath, or consistently looking at other players' cards.
+
+
+ Next Round.
+
+Game: 2
+Round: 1
+
+ Player 1 [Card Counter] places his bet.
+
+Too many tokens. Going to sleep!
+
+I'll bet 10€ to start. The deck is neutral at this point. Running count: 0.
+
+
+ Player 2 places his bet.
+
+I'll bet 20€, feeling a bit lucky tonight. Let's roll!
+
+
+ House gives every player two cards and itself one.
+
+Too many tokens. Going to sleep!
+Player 1: 8 of Spades.
+Player 2: 6 of Clubs.
+The house: 2 of Hearts.
+
+Second card round:
+Player 1: 3 of Clubs.
+Player 2: 4 of Hearts.
+The house: 3 of Diamonds (hidden card).
+
+Cards left in the deck: 7 of Clubs, 5 of Spades, 6 of Hearts, 2 of Diamonds, 8 of Hearts, 2 of Spades, 6 of Diamonds, 4 of Clubs, 7 of Spades, 5 of Clubs, 7 of Hearts, 8 of Diamonds, 8 of Clubs, 6 of Spades, 3 of Spades, 5 of Hearts, 4 of Spades, 7 of Diamonds, 3 of Hearts, 4 of Diamonds, 2 of Clubs.
+
+For each card held by the mano, write if the players are asking for another card. If they are not asking for another card, write the value of their card. If it is their turn to ask for a card and they have not already been asked, the house has to ask the mano if they want another card. Only generate the next answer.Rounds to go before the game ends: 2
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+I have 8 of Spades and 3 of Clubs, that's 11. It's safe to draw another card. Running count still at 0. I draw a card... 4 of Hearts. 15 total, I'll hit again... 2 of Clubs. Now it's 17, I'll stay.
+
+
+ Player 2 draws additional cards.
+
+Too many tokens. Going to sleep!
+Holding a 6 of Clubs and a 4 of Hearts, that's 10 total. I'll take another card... 7 of Hearts. That makes 17, I'll stay.
+
+
+ The house draws additional cards and evaluates the outcome.
+
+The house reveals the hidden card: 3 of Diamonds
+
+This gives the house a total of 5. According to the rules of Blackjack, the house should draw a card when the total is less than or equal to 16. The house draws
+a card... 4 of Clubs. This gives the house a total of 9. The house draws another card... 6 of Spades. Now the total is 15, still less than 17, Thus, house draws another card...  7 of Hearts. Now, the house has a total of 22, which is a bust.
+
+Player 1's hand: 17 with the 8 of Spades, 3 of Clubs, 4 of Hearts, and 2 of Clubs.
+Player 2's hand: 17 with the 6 of Clubs, 4 of Hearts, and 7 of Hearts.
+
+Since the house busted, player 1 wins and player 2 also wins.
+
+All the played cards this round are:
+Player 1: 8 of Spades, 3 of Clubs, 4 of Hearts, and 2 of Clubs (17 in total)
+Player 2: 6 of Clubs, 4 of Hearts, and 7 of Hearts (17 in total)
+The House: 2 of Hearts, 3 of Diamonds, 4 of Clubs, 6 of Spades and 7 of Hearts (22 in total)
+
+Player 1 had bet 10 €, player 2 had bet 20 €. So, the new stakes are:
+Player 1: 140 €  (130 € + 10 € win)
+Player 2: 135 €  (115 € + 20 € win)
+
+That concludes this round. The remaining cards in the deck are now: 7 of Clubs, 5 of Spades, 6 of Hearts, 2 of Diamonds, 8 of Hearts, 2 of Spades, 6 of Diamonds, 7 of Spades, 5 of Clubs, 8 of Diamonds, 8 of Clubs, 3 of Spades, 5 of Hearts, 4 of Spades, 7 of Diamonds, 3 of Hearts, 4 of Diamonds.
+
+
+ Security checks if someone is counting cards.
+
+Too many tokens. Going to sleep!
+Observation: In this round, Player 1 maintained the same bet as the previous game, while Player 2 has doubled his bet. From the betting patterns alone, it's impossible to tell if any player is counting cards. Their betting doesn't drastically change in relation to the supposed count of the deck. Moreover, neither player has shown overly cautious or aggressive play which can indicate card counting. Without further evidence to indicate otherwise, as of now, no player appears to be counting cards. More rounds of observation are needed for a definitive conclusion. I will continue observing.
+
+
++------------------+-------------------+---------+
+|  His Card Count  | Actual Card Count | His Bet |
++------------------+-------------------+---------+
+| Running count: 0 |        -20        |   10€   |
++------------------+-------------------+---------+
+
+
+ Next Round.
+
+Round: 2
+
+ Player 1 [Card Counter] places his bet.
+
+I'll bet 15€ as we have seen mostly small cards. Running count: +2.
+
+
+ Player 2 places his bet.
+
+Too many tokens. Going to sleep!
+All right, all right! I'll bet 25€. Let the good times roll!
+
+
+ House gives every player two cards and itself one.
+
+Player 1: 2 of Hearts.
+Player 2: 4 of Hearts.
+The house: 7 of Clubs.
+
+Second card round:
+Player 1: 6 of Hearts.
+Player 2: 8 of Hearts.
+The house: 6 of Diamonds (hidden card).
+
+Cards left in the deck: 2 of Spades, 7 of Spades, 5 of Clubs, 7 of Hearts, 8 of Diamonds, 8 of Clubs, 3 of Spades, 5 of Hearts, 4 of Spades, 7 of Diamonds, 3 of Hearts, 4 of Diamonds, 2 of Clubs.
+
+Let's have a look at the moves of the players.
+
+I hold 2 of Hearts and 6 of Hearts, that's 8. It's safe to draw another card. Running count is +3. I draw a card... 7 of Spades. Total is now 15, I'll stay.
+
+I got 4 of Hearts and 8 of Hearts, that's 12. I'll take another card...  5 of Clubs. That makes 17, I'll stay too.
+
+The house reveals the hidden card: 6 of Diamonds
+
+This gives the house a total of 13. As the total is less than 17, the house draws a card... 7 of Hearts. This gives a total of 20.
+
+Player 1's hand: 15 with the 2 of Hearts, 6 of Hearts, and 7 of Spades.
+Player 2's hand: 17 with the 4 of Hearts, 8 of Hearts, and 5 of Clubs.
+
+Player 1 loses against the house due to lower hand.
+Player 2 also loses against the house due to lower hand.
+
+All the played cards this round are:
+Player 1: 2 of Hearts, 6 of Hearts, and 7 of Spades (15 in total)
+Player 2: 4 of Hearts, 8 of Hearts, and 5 of Clubs (17 in total)
+The House: 7 of Clubs, 6 of Diamonds and 7 of Hearts (20 in total)
+
+Player 1 had bet 15 €, player 2 had bet 25 €. So, the new stakes are:
+Player 1: 125 €  (140 € - 15 € loss)
+Player 2: 110 €  (135 € - 25 € loss)
+
+That concludes this round. The remaining cards in the deck are now: 8 of Diamonds, 8 of Clubs, 3 of Spades, 5 of Hearts, 4 of Spades, 7 of Diamonds, 3 of Hearts, 4 of Diamonds, 2 of Clubs.
+
+Observation: In this round, Player 1 increased his bet and mentioned a running count of +3. This suggests that he may be counting cards, as his bet variation is in response to the increasing count. His reliance on the count and adaptability in his betting behavior offer strong indicators of card counting. I am becoming more convinced that Player 1 is the card counter. I recommend that further action should be taken if similar behavior is noticed in the following rounds.
+
+Card Counter Feedback:
+
+The bet placement and running count reflect your understanding of the system. However, it seems like your running count is incorrect. It should be +5 and not +3. Ensure to improve your counting process and remember that your bets should be based on the accurate running count. If card counting is performed correctly, it can predict the outcomes and tilt the game in your favor.
+
+Security's Advice,
+
+I recommend you closely monitor Player 1's game. Based on my observations from the past two rounds, his betting pattern and play decisions suggest that he may be counting cards. Watch for more signs of card counting, such as drastic bet increases when the count is high, which seems to be the case with player 1. Also, keep an eye on his interaction with chips as card counters are known to stack their chips in a more complicated manner due to constantly varying bet sizes. More rounds of observation are required to confirm this suspicion.
+
+If card counting is confirmed, kindly approach the player courteously, explaining that he is no longer allowed to play blackjack. Remember, card counting isn't illegal but casinos reserve the right to refuse service to anyone. You can also start a conversation with the suspected card counter, this often throws them off as it's harder to count cards while holding a conversation. In the meantime, consider shuffling the deck more frequently to throw off his count.
+2 of Hearts
+ New Round!
+The following Cards are left in the deck:, 7 of Spades
+ New Round!
+The following Cards are left in the deck:, 5 of Clubs
+ New Round!
+The following Cards are left in the deck:, 8 of Diamonds
+ New Round!
+The following Cards are left in the deck:, 3 of Spades
+ New Round!
+The following Cards are left in the deck:, 4 of Spades
+ New Round!
+The following Cards are left in the deck:, 3 of Hearts
+ New Round!
+The following Cards are left in the deck:, 2 of Clubs
+
+Round: 3
+Player 1 [Card Counter] places his bet.
+
+I'll bet 20€ as there are many small cards left in the deck. Running count: +5.
+
+Feeling adventurous. I will bet 30€. Hoping for the best.
+
+Player 1: 7 of Spades.
+Player 2: 5 of Clubs.
+The house: 8 of Diamonds.
+
+Second card round:
+Player 1: 3 of Spades.
+Player 2: 4 of Spades.
+The house: 3 of Hearts (hidden card).
+
+Cards remaining in the deck: 7 of Diamonds, 4 of Diamonds, 2 of Clubs.
+
+Next move of each player:
+
+With a 7 of Spades and 3 of Spades, I am at 10. It's safe to draw another card. Running count is now +6. I draw a card... 7 of Diamonds. 17 total. I'll stay.
+
+I have a 5 of Clubs and a 4 of Spades, that's 9. I'll take a card... 4 of Diamonds. That's 13...kind of risky, but I'll take another... 2 of Clubs. That's 15. I'll stay.
+
+The house reveals the hidden card: 3 of Hearts
+
+This gives the house a total of 11. As the total is less than 17, the house should draw a card... but there are no cards left in the deck.
+
+Player 1's hand: 17 with the 7 of Spades, 3 of Spades and 7 of Diamonds.
+Player 2's hand: 15 with the 5 of Clubs, 4 of Spades and 2 of Clubs.
+
+Player 1 wins against the house with his higher hand.
+Player 2 loses against the house due to a lower hand.
+
+All the played cards this round are:
+Player 1: 7 of Spades, 3 of Spades and 7 of Diamonds (17 in total)
+Player 2: 5 of Clubs, 4 of Spades and 2 of Clubs (15 in total)
+The House: 8 of Diamonds and 3 of Hearts (11 in total - but no more cards to draw)
+
+Player 1 had bet 20 €, player 2 had bet 30 €. So, the new stakes are:
+Player 1: 145 €  (125 € + 20 € win)
+Player 2: 80 €  (110 € - 30 € loss)
+
+Conclusion : There are no cards left in the deck. This game has reached its end.
+
+Observation: Player 1 increased his bet again in this round as the running count was favourable, he also kept the count accurately this time. Consistent increase of bet in tune with the count is a clear indication of card counting. I can now safely say that Player 1 has been counting cards.
+
+Card Counter Feedback:
+
+Your bets in this game were in line with the running count which is a good strategy as a card counter. Your running count was accurate which indicates that you are keeping track of the cards in the deck. However, remember that card counting doesn't guarantee winning every hand, it only gives you a statistical advantage.
+
+Security's Advice:
+
+Based on my analysis, Player 1 was undeniably counting cards. It's advisable to take action against this player as indicated earlier. Style and level of play, consistent increase in bet size with favourable deck, accuracy of running counts are signs of a skilled card counter which is true in the case of Player 1. It's important not to jump to conclusions too hastily, but in this case, with evidence from multiple rounds, we can safely say that Player 1 was indeed counting cards.
+
+
+ Player 1 [Card Counter] draws additional cards.
+
+Too many tokens. Going to sleep!
+Holding a 7 of Spades and 3 of Spades, that's 10. It's safe to draw another card. Running count is now +6. I draw a card... 7 of Diamonds. 17 total. I'll stay.
+
+
+ Player 2 draws additional cards.
+
+Too many tokens. Going to sleep!
+Great hand! I've got a 5 of Clubs and a 4 of Spades, totalling 9. Might need more luck so I'll take another card... 4 of Diamonds. Now I'm at 13. Feeling adventurous, let's go for another card... And it's a 5 of Hearts! At total of 18. I think I'll stay put now.
+
+
+ The house draws additional cards and evaluates the outcome.
+
+Too many tokens. Going to sleep!
+The house reveals the hidden card: 3 of Hearts
+
+This gives the house a total of 11. As the total is less than 17, the house should draw a card... but there are no cards left in the deck.
+
+Player 1's hand: 17 with the 7 of Spades, 3 of Spades and 7 of Diamonds.
+Player 2's hand: 15 with the 5 of Clubs, 4 of Spades and 2 of Clubs.
+
+Player 1 wins against the house with his higher hand.
+Player 2 loses against the house due to a lower hand.
+
+All the played cards this round are:
+Player 1: 7 of Spades, 3 of Spades and 7 of Diamonds (17 in total)
+Player 2: 5 of Clubs, 4 of Spades and 2 of Clubs (15 in total)
+The House: 8 of Diamonds and 3 of Hearts (11 in total - but no more cards to draw)
+
+Player 1 had bet 20 €, player 2 had bet 30 €. So, the new stakes are:
+Player 1: 145 €  (125 € + 20 € win)
+Player 2: 80 €  (110 € - 30 € loss)
+
+Conclusion : There are no cards left in the deck. This game has reached its end.
+
+Observation: Player 1 increased his bet again in this round as the running count was favourable, he also kept the count accurately this time. Consistent increase of bet in tune with the count is a clear indication of card counting. I can now safely say that Player 1 has been counting cards.
+
+Card Counter Feedback:
+
+Your bets in this game were in line with the running count which is a good strategy as a card counter. Your running count was accurate which indicates that you are keeping track of the cards in the deck. However, remember that card counting doesn't guarantee winning every hand, it only gives you a statistical advantage.
+
+Security's Advice:
+
+Based on my analysis, Player 1 was undeniably counting cards. It's advisable to take action against this player as indicated earlier. Style and level of play, consistent increase in bet size with favourable deck, accuracy of running counts are signs of a skilled card counter which is true in the case of Player 1. It's important not to jump to conclusions too hastily, but in this case, with evidence from multiple rounds, we can safely say that Player 1 was indeed counting cards.
+
+
+ Security checks if someone is counting cards.
+
+Too many tokens. Going to sleep!
+Observation: In the final round, Player 1's bet increased to 20€ which correlates with his running count of +6, indicating a favorable deck. This raised some suspicion along with his correct running count as it signifies his awareness of the cards remaining in the deck. Therefore, based on these observations, I have reasons to believe that Player 1 is counting cards. I would recommend further investigation to confirm this.
+
+
++-------------------+-------------------+---------+
+|   His Card Count  | Actual Card Count | His Bet |
++-------------------+-------------------+---------+
+| Running count: +2 |         -8        |   15€   |
++-------------------+-------------------+---------+
+
+
+ Prompt optimizer gives tipps to the card counter.
+
+Card Counter Feedback:
+
+As an AI who has observed your game, I notice several areas where you can improve your card counting strategy.
+
+1. Count Accuracy: Keep a much closer eye on your count. Misjudgments can lead to substantial consequences. Your running count was +2 when it was actually -8. This is a glaring error that, with practice and concentration, can be avoided. It's critical to keep your count as accurate as possible to make the next move.
+
+2. Betting: Beware of hasty betting increases. They can signal to the dealer or security that you might be counting cards. The calculation of the true count helps you adjust your bets accordingly; so, if your count isn't spot on, the size of your bets may be off as well.
+
+3. Reading the "Deck": It's recommended to adjust the running count to a "true count," which takes into account the approximate number of decks remaining. This allows for a more accurate and advantageous betting.
+
+4. Behavioral Adjustment: Try to blend in with other players. Don't be too robotic or obvious about watching every card that is dealt. Keep your reactions natural.
+
+Security Feedback:
+
+Observing the card counter as casino security personnel can bring insights into practices that might compromise the game's fairness. Utilize the following advice:
+
+1. Notice Consistency: Keep an eye on players who consistently alter their bets. These patterns may indicate a card counting strategy.
+
+2. Gauge Player Reactions: Notice if a player seems excessively alert. Counters tend to follow each card dealt very closely and are more likely to react noticeably to dealt cards.
+
+3. Calculate the Count: Familiarize yourself with card counting techniques to understand what counts might be beneficial to the player and adjust the game accordingly.
+
+4. Surveillance: If a player is suspected of counting cards, increase surveillance to include more frequent deck shuffling, which can disrupt a card counter's strategy.
+
+5. Maintain Friendly Environment: It's crucial to keep the gaming environment friendly yet professional. Confrontations should be discreet and respectful, focusing on ensuring the fairness of the game rather than accusing individuals.
