@@ -1,4 +1,10 @@
 # US-BJ-PO
+
+Teammitglieder:
+Quang Huy Vien (s0582406)
+Miroslaw Keil (s0582192)
+
+Thema:
 Prompt Optimzer Using GPT-4
 
 Dieses Repo beinhaltet ein KI-Blackjack Spiel auf Grundlage des Seller-Byer-Problems mit Promptoptimization.
@@ -13,15 +19,17 @@ Es gibt eine Security, welche versucht den Kartenzähler zu entlarven.
 
 Es gibt einen Supervisor, welcher nach jedem Spiel dem Kartenzähler und der Security Tipps gibt (Promptoptimization).
 
+Link zum Repository:
+https://github.com/dalbongy/US-BJ-PO
 
-In folgenden Schritten wollen wir das Spiel entwickeln.
+Erklärung der Files:
 
-1. Dealer und 3 einfache Spieler, welche immer den gleichen Einsatz setzen.
+main.py = der Code
 
-2. Der Kartenzähler kommt hinzu.
+Results = alle Konsolen Outputs
 
-3. Die Security kommt hinzu.
+Prompt templates = Alle Anweisungen an die Agents mit persona und system_description und instructions an die einzelnen Rollen
 
-4. Der Supervisor kommt hinzu.
+Der API-Key wird in einer .env Datei gespeichert, welche nicht im GitHub Repo liegt.
 
-5. (Optional) Die ersten 3 Spieler spielen mit einer vorher definierten Persönlichkeit.
+Einfach lokal eine .env Datei mit OPEN_AI_KEY=YOUR_KEY anlegen.
